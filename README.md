@@ -1,1 +1,1 @@
-# EduTeacher---iOS-ver.
+# EduTeacher iOS ver.
