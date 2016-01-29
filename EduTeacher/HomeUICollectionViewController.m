@@ -23,6 +23,7 @@
                                   [UIColor colorWithRed:0.368f    green:0.937f    blue:1.f        alpha:1.f],
                                   [UIColor colorWithRed:1.f       green:0.482f    blue:0.478f     alpha:1.f],
                                   ];
+    self.collectionView.scrollEnabled=NO;
     
 }
 
