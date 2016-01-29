@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6D828DB01C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */; };
+		6D828DB31C5BE826008E5DE9 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */; };
+		6D828DB61C5BEAE1008E5DE9 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DB51C5BEAE1008E5DE9 /* HomeCollectionViewCell.m */; };
+		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
 		C84F113A1C5BA191001A3B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11391C5BA191001A3B5D /* main.m */; };
 		C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F113C1C5BA191001A3B5D /* AppDelegate.m */; };
 		C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11411C5BA191001A3B5D /* Main.storyboard */; };
@@ -19,6 +22,11 @@
 /* Begin PBXFileReference section */
 		6D828DAE1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseClassCollectionViewCell.h; sourceTree = "<group>"; };
 		6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseClassCollectionViewCell.m; sourceTree = "<group>"; };
+		6D828DB11C5BE826008E5DE9 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = ../../HomeUICollectionViewController.h; sourceTree = "<group>"; };
+		6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = ../../HomeUICollectionViewController.m; sourceTree = "<group>"; };
+		6D828DB41C5BEAE1008E5DE9 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		6D828DB51C5BEAE1008E5DE9 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTestCreating.storyboard; sourceTree = "<group>"; };
 		C84F11351C5BA191001A3B5D /* EduTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F11391C5BA191001A3B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C84F113B1C5BA191001A3B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +55,8 @@
 			children = (
 				6D828DAE1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.h */,
 				6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */,
+				6D828DB41C5BEAE1008E5DE9 /* HomeCollectionViewCell.h */,
+				6D828DB51C5BEAE1008E5DE9 /* HomeCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 		C84F11381C5BA191001A3B5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
 				C84F11491C5BA191001A3B5D /* Info.plist */,
 				C84F11391C5BA191001A3B5D /* main.m */,
 			);
@@ -102,7 +113,7 @@
 			children = (
 				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
 				C84F11411C5BA191001A3B5D /* Main.storyboard */,
-				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
+				6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */,
 			);
 			name = Resourses;
 			sourceTree = "<group>";
@@ -110,6 +121,8 @@
 		C84F11511C5BA45B001A3B5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D828DB11C5BE826008E5DE9 /* HomeUICollectionViewController.h */,
+				6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */,
 				C84F11521C5BA4D6001A3B5D /* SelectClassViewController.h */,
 				C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */,
 			);
@@ -175,6 +188,7 @@
 			files = (
 				C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */,
 				C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */,
+				6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */,
 				C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,10 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D828DB31C5BE826008E5DE9 /* HomeUICollectionViewController.m in Sources */,
 				6D828DB01C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,
+				6D828DB61C5BEAE1008E5DE9 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

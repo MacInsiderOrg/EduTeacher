@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TH5-rk-enk" kind="relationship" relationship="rootViewController" id="Am7-bP-J9M"/>
+                        <segue destination="ZFO-vx-zj9" kind="relationship" relationship="rootViewController" id="a5i-aY-kFh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdI-Kw-FI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +70,67 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ak5-EZ-vec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-55"/>
+            <point key="canvasLocation" x="2231" y="4"/>
+        </scene>
+        <!--HomeUI Collection View Controller-->
+        <scene sceneID="Hr2-Sh-XcK">
+            <objects>
+                <collectionViewController id="ZFO-vx-zj9" customClass="HomeUICollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qzl-94-XJw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyl-QE-YKw">
+                            <size key="itemSize" width="337" height="332"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCellIdentifier" id="Qat-DT-IWT" customClass="HomeCollectionViewCell">
+                                <rect key="frame" x="132" y="64" width="337" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="337" height="332"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-VX-6zV">
+                                            <rect key="frame" x="60" y="264" width="217" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Mc-SD-T0q">
+                                            <rect key="frame" x="0.0" y="0.0" width="337" height="234"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7Mc-SD-T0q" secondAttribute="trailing" id="9AU-Eb-3a2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jye-VX-6zV" secondAttribute="trailing" constant="60" id="RFV-nr-YIR"/>
+                                    <constraint firstItem="Jye-VX-6zV" firstAttribute="leading" secondItem="Qat-DT-IWT" secondAttribute="leading" constant="60" id="dF3-5a-cu1"/>
+                                    <constraint firstItem="Jye-VX-6zV" firstAttribute="top" secondItem="7Mc-SD-T0q" secondAttribute="bottom" constant="30" id="erw-5X-7cb"/>
+                                    <constraint firstItem="7Mc-SD-T0q" firstAttribute="top" secondItem="Qat-DT-IWT" secondAttribute="top" id="fAz-Ep-o4H"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jye-VX-6zV" secondAttribute="bottom" constant="20" id="q6P-o6-cKh"/>
+                                    <constraint firstItem="7Mc-SD-T0q" firstAttribute="leading" secondItem="Qat-DT-IWT" secondAttribute="leading" id="sNF-7m-lpR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="topicImage" destination="7Mc-SD-T0q" id="pdy-cC-g2E"/>
+                                    <outlet property="topicName" destination="Jye-VX-6zV" id="KVH-Qg-MKh"/>
+                                    <segue destination="TH5-rk-enk" kind="show" id="R4i-XD-2YT"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ZFO-vx-zj9" id="GOa-xy-vqr"/>
+                            <outlet property="delegate" destination="ZFO-vx-zj9" id="cxU-7Y-DNJ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="6Ti-Ya-UNU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mB-fa-VSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439" y="4"/>
         </scene>
     </scenes>
 </document>
