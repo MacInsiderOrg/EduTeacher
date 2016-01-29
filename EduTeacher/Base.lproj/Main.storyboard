@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HomeUI Collection View Controller-->
@@ -13,20 +14,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gDN-vI-q4h">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="322" height="290"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="WWD-PH-Viz">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="WWD-PH-Viz" customClass="HomeTopicCollectionCell">
+                                <rect key="frame" x="139" y="0.0" width="322" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="290"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-sU-Cic">
+                                            <rect key="frame" x="140" y="241" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-8T-a9g">
+                                            <rect key="frame" x="55" y="81" width="213" height="128"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="dKz-8T-a9g" firstAttribute="centerY" secondItem="WWD-PH-Viz" secondAttribute="centerY" id="2Vp-ua-Zt6"/>
+                                    <constraint firstItem="dKz-8T-a9g" firstAttribute="centerX" secondItem="WWD-PH-Viz" secondAttribute="centerX" id="MAb-Iq-VRO"/>
+                                    <constraint firstItem="dKz-8T-a9g" firstAttribute="width" secondItem="WWD-PH-Viz" secondAttribute="width" multiplier="0.5" constant="52" id="Ng6-eL-slV"/>
+                                    <constraint firstItem="tIs-sU-Cic" firstAttribute="top" secondItem="dKz-8T-a9g" secondAttribute="bottom" constant="32" id="jay-jj-RWh"/>
+                                    <constraint firstItem="dKz-8T-a9g" firstAttribute="height" secondItem="WWD-PH-Viz" secondAttribute="height" multiplier="0.5" constant="-17" id="qt7-rG-8Kn"/>
+                                    <constraint firstItem="tIs-sU-Cic" firstAttribute="centerX" secondItem="WWD-PH-Viz" secondAttribute="centerX" id="sLc-dK-O95"/>
+                                    <constraint firstItem="tIs-sU-Cic" firstAttribute="width" secondItem="WWD-PH-Viz" secondAttribute="width" multiplier="0.5" constant="-119" id="uMK-No-uBl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="dKz-8T-a9g" id="Rcg-zH-FBW"/>
+                                    <outlet property="topicNameLabel" destination="tIs-sU-Cic" id="f1r-RI-Cgw"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

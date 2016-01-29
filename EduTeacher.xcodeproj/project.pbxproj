@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EAA31B41C5BBEDF007C467C /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA31B31C5BBEDF007C467C /* HomeUICollectionViewController.m */; };
+		5EAA31B71C5BD89D007C467C /* HomeTopicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA31B61C5BD89D007C467C /* HomeTopicCollectionCell.m */; };
 		C84F113A1C5BA191001A3B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11391C5BA191001A3B5D /* main.m */; };
 		C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F113C1C5BA191001A3B5D /* AppDelegate.m */; };
 		C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11411C5BA191001A3B5D /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* Begin PBXFileReference section */
 		5EAA31B21C5BBEDF007C467C /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeUICollectionViewController.h; sourceTree = "<group>"; };
 		5EAA31B31C5BBEDF007C467C /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeUICollectionViewController.m; sourceTree = "<group>"; };
+		5EAA31B51C5BD89D007C467C /* HomeTopicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTopicCollectionCell.h; sourceTree = "<group>"; };
+		5EAA31B61C5BD89D007C467C /* HomeTopicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTopicCollectionCell.m; sourceTree = "<group>"; };
 		C84F11351C5BA191001A3B5D /* EduTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F11391C5BA191001A3B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C84F113B1C5BA191001A3B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				C84F11381C5BA191001A3B5D /* Supporting Files */,
 				5EAA31B21C5BBEDF007C467C /* HomeUICollectionViewController.h */,
 				5EAA31B31C5BBEDF007C467C /* HomeUICollectionViewController.m */,
+				5EAA31B51C5BD89D007C467C /* HomeTopicCollectionCell.h */,
+				5EAA31B61C5BD89D007C467C /* HomeTopicCollectionCell.m */,
 			);
 			path = EduTeacher;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EAA31B71C5BD89D007C467C /* HomeTopicCollectionCell.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				5EAA31B41C5BBEDF007C467C /* HomeUICollectionViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,

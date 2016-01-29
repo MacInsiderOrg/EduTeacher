@@ -7,6 +7,7 @@
 //
 
 #import "HomeUICollectionViewController.h"
+#import "HomeTopicCollectionCell.h"
   static NSString* identifier=@"cellIdentifier";
 @implementation HomeUICollectionViewController
 
@@ -42,21 +43,16 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
   
-    UICollectionViewCell* cell=[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    UIImageView* imageView=[[UIImageView alloc]initWithFrame:[self findFrameForImageWithCell:cell]];
+    HomeTopicCollectionCell* cell=[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
  
-    [imageView setImage:[UIImage imageNamed:[self.topicsNamesArray objectAtIndex:indexPath.row]]];
+    [cell.imageView setImage:[UIImage imageNamed:[self.topicsNamesArray objectAtIndex:indexPath.row]]];
     
     //label
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init] ;
     [paragraphStyle setAlignment:NSTextAlignmentCenter];
     NSAttributedString* topicName=[[NSAttributedString alloc]initWithString:[self.topicsNamesArray objectAtIndex:indexPath.row] attributes:@{NSParagraphStyleAttributeName:paragraphStyle,
                           NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman" size:24.0]}];//set parametrs for att sting
-    UILabel* label=[[UILabel alloc]initWithFrame:[self findFrameForLabelWithCell:cell]];
-    [label setAttributedText:topicName];
-    
-    [cell addSubview:imageView];//add image
-    [cell addSubview:label];//add label
+    [cell.topicNameLabel setAttributedText:topicName];
     cell.backgroundColor=[self.backGroundsColorsArray objectAtIndex:indexPath.row];
     return cell;
 }
@@ -80,6 +76,7 @@
     
     return UIEdgeInsetsMake(0,0,0,0);  // top, left, bottom, right
 }
+/*
 #pragma mark-private method
 -(CGRect)findFrameForImageWithCell:(UICollectionViewCell*)cell
 {
@@ -93,10 +90,11 @@
     CGFloat labelHeight=cell.bounds.size.height/4;
     CGFloat labelWidth=cell.bounds.size.width/2;
     return  CGRectMake(labelWidth/2, labelHeight*3, labelWidth, labelHeight);
-}
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-   // [self.collectionView reloadData];??
+}*/
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    [self.collectionViewLayout invalidateLayout];
     
 }
 @end
