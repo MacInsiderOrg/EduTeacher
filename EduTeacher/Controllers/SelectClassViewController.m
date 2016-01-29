@@ -7,17 +7,7 @@
 //
 
 #import "SelectClassViewController.h"
-
-@interface ClassNumberViewCell : UICollectionViewCell
-
-@property (weak, nonatomic) IBOutlet UILabel *classNumber;
-
-@end
-
-@implementation ClassNumberViewCell
-
-@end
-
+#import "ChooseClassCollectionViewCell.h"
 
 
 @implementation SelectClassViewController
@@ -25,86 +15,56 @@
 #pragma mark - UIViewController methods
 
 - (void) viewDidLoad {
-    
     [super viewDidLoad];
-    
-    self.classNumbers = [NSMutableArray array];
+    [self setBackgroundColor];
+}
 
+- (void) didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+- (void) setBackgroundColor {
+    self.classNumbers = [NSMutableArray array];
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
-            
             UIColor* backgroundColor = ((i + j) % 2 == 0) ? [UIColor whiteColor] : [UIColor colorWithRed: .843f green: .843f blue: .863f alpha: 1.f];
-            
             [self.classNumbers addObject: backgroundColor];
         }
     }
 }
 
-- (void) didReceiveMemoryWarning {
-    
-    [super didReceiveMemoryWarning];
-    
-}
-
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    
-    NSLog(@"Change device orientation");
-    
     [self.collectionViewLayout invalidateLayout];
-    
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
-}
 
 #pragma mark - UICollectionViewDelegate methods
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
     return 1;
 }
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
     return [self.classNumbers count];
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    ClassNumberViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"classCell" forIndexPath: indexPath];
-    
+    ChooseClassCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"classCell" forIndexPath: indexPath];
     cell.backgroundColor = [self.classNumbers objectAtIndex: indexPath.row];
-    
     cell.classNumber.text = [NSString stringWithFormat: @"%ld", (indexPath.row + 1)];
-    
-    /*
-    UILabel* label = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, CGRectGetWidth(cell.frame), CGRectGetHeight(cell.frame))];
-    label.text = [NSString stringWithFormat: @"%d", (indexPath.row + 1)];
-    label.font = [UIFont fontWithName: @"Avenir-Book" size: 60];
-    label.center = CGPointMake(CGRectGetWidth(cell.frame) / 2, CGRectGetHeight(cell.frame) / 2);
-    
-    [cell addSubview: label];
-     */
-    
     return cell;
 }
 
 #pragma mark - Layout Collection View
 
 - (CGSize) collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
     CGFloat width = CGRectGetWidth(collectionView.frame) / 4;
     CGFloat height = CGRectGetHeight(collectionView.frame) / 3;
-    
-    //CGFloat height = (CGRectGetHeight(collectionView.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame)) / 3;
-    
     return CGSizeMake(width, height);
 }
 
 - (CGFloat) collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    
     return 0.f;
 }
 
@@ -114,8 +74,13 @@
 }
 
 - (UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    
     return UIEdgeInsetsMake(0.f, 0.f, 0.f, 0.f);
+}
+
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
 }
 
 @end

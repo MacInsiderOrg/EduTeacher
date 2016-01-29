@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D828DB01C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */; };
 		C84F113A1C5BA191001A3B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11391C5BA191001A3B5D /* main.m */; };
 		C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F113C1C5BA191001A3B5D /* AppDelegate.m */; };
 		C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11411C5BA191001A3B5D /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D828DAE1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseClassCollectionViewCell.h; sourceTree = "<group>"; };
+		6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseClassCollectionViewCell.m; sourceTree = "<group>"; };
 		C84F11351C5BA191001A3B5D /* EduTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F11391C5BA191001A3B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C84F113B1C5BA191001A3B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D828DAD1C5BE08C008E5DE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D828DAE1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.h */,
+				6D828DAF1C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C84F112C1C5BA191001A3B5D = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +72,10 @@
 			children = (
 				C84F113B1C5BA191001A3B5D /* AppDelegate.h */,
 				C84F113C1C5BA191001A3B5D /* AppDelegate.m */,
-				C84F114F1C5BA44D001A3B5D /* Model */,
-				C84F11501C5BA455001A3B5D /* Views */,
 				C84F11511C5BA45B001A3B5D /* Controllers */,
-				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
-				C84F11491C5BA191001A3B5D /* Info.plist */,
+				6D828DAD1C5BE08C008E5DE9 /* Views */,
+				C84F114F1C5BA44D001A3B5D /* Model */,
+				C84F11501C5BA455001A3B5D /* Resourses */,
 				C84F11381C5BA191001A3B5D /* Supporting Files */,
 			);
 			path = EduTeacher;
@@ -73,6 +84,7 @@
 		C84F11381C5BA191001A3B5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C84F11491C5BA191001A3B5D /* Info.plist */,
 				C84F11391C5BA191001A3B5D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -85,13 +97,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		C84F11501C5BA455001A3B5D /* Views */ = {
+		C84F11501C5BA455001A3B5D /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
 				C84F11411C5BA191001A3B5D /* Main.storyboard */,
 				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
 			);
-			name = Views;
+			name = Resourses;
 			sourceTree = "<group>";
 		};
 		C84F11511C5BA45B001A3B5D /* Controllers */ = {
@@ -173,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D828DB01C5BE102008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,

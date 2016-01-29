@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectClassViewController : UICollectionViewController
-
-@property (strong, nonatomic) NSMutableArray* classNumbers;
-
+@property (nonatomic, strong) NSMutableArray* classNumbers;
 @end
