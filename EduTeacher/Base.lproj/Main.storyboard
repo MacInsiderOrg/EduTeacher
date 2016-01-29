@@ -35,7 +35,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classCell" id="Dws-VK-Hk3" customClass="ClassNumberViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectClassCollectionViewCell" id="Dws-VK-Hk3" customClass="ClassNumberViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="224" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -43,11 +43,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-nX-x2t">
-                                            <rect key="frame" x="46" y="58" width="133" height="92"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="133" id="EwR-kW-FLk"/>
-                                                <constraint firstAttribute="height" constant="92" id="FvH-wG-pt9"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="208"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="70"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -56,8 +52,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="centerY" secondItem="Dws-VK-Hk3" secondAttribute="centerY" id="bVm-tC-pdZ"/>
-                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="centerX" secondItem="Dws-VK-Hk3" secondAttribute="centerX" id="eHu-Ew-fhP"/>
+                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="height" secondItem="Dws-VK-Hk3" secondAttribute="height" id="1kl-lC-MWL"/>
+                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="width" secondItem="Dws-VK-Hk3" secondAttribute="width" id="9w4-l2-af8"/>
+                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="centerX" secondItem="Dws-VK-Hk3" secondAttribute="centerX" id="Irt-ep-0AI"/>
+                                    <constraint firstItem="3YC-nX-x2t" firstAttribute="centerY" secondItem="Dws-VK-Hk3" secondAttribute="centerY" id="ZBS-wx-Yqb"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="classNumber" destination="3YC-nX-x2t" id="JwP-CE-Mvv"/>
@@ -74,7 +72,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ak5-EZ-vec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-55"/>
+            <point key="canvasLocation" x="803" y="-48"/>
         </scene>
     </scenes>
 </document>

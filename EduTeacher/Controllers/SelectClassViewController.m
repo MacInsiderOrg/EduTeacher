@@ -10,14 +10,13 @@
 
 @interface ClassNumberViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *classNumber;
+@property (weak, nonatomic) IBOutlet UILabel* classNumber;
 
 @end
 
 @implementation ClassNumberViewCell
 
 @end
-
 
 
 @implementation SelectClassViewController
@@ -43,20 +42,15 @@
 - (void) didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
-    
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     
-    NSLog(@"Change device orientation");
-    
     [self.collectionViewLayout invalidateLayout];
-    
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
+    //
 }
 
 #pragma mark - UICollectionViewDelegate methods
@@ -73,21 +67,11 @@
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    ClassNumberViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"classCell" forIndexPath: indexPath];
+    ClassNumberViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"SelectClassCollectionViewCell" forIndexPath: indexPath];
     
     cell.backgroundColor = [self.classNumbers objectAtIndex: indexPath.row];
-    
-    cell.classNumber.text = [NSString stringWithFormat: @"%ld", (indexPath.row + 1)];
-    
-    /*
-    UILabel* label = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, CGRectGetWidth(cell.frame), CGRectGetHeight(cell.frame))];
-    label.text = [NSString stringWithFormat: @"%d", (indexPath.row + 1)];
-    label.font = [UIFont fontWithName: @"Avenir-Book" size: 60];
-    label.center = CGPointMake(CGRectGetWidth(cell.frame) / 2, CGRectGetHeight(cell.frame) / 2);
-    
-    [cell addSubview: label];
-     */
-    
+    cell.classNumber.text = [NSString stringWithFormat: @"%d", (indexPath.row + 1)];
+
     return cell;
 }
 
@@ -97,8 +81,6 @@
     
     CGFloat width = CGRectGetWidth(collectionView.frame) / 4;
     CGFloat height = CGRectGetHeight(collectionView.frame) / 3;
-    
-    //CGFloat height = (CGRectGetHeight(collectionView.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame)) / 3;
     
     return CGSizeMake(width, height);
 }
