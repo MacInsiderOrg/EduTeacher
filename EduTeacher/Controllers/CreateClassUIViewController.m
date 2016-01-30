@@ -22,8 +22,15 @@ static NSCharacterSet* nonDigits;
 #pragma mark-UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"textFieldShouldReturn");
     [textField resignFirstResponder];
+    if([self isEmpty])
+    {
+        return NO;
+    }
+    else
+    {
+        //to other view controler
+    }
     return YES;
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string   // return NO to not change text
@@ -40,9 +47,41 @@ static NSCharacterSet* nonDigits;
 
     return  NO;
 }
+#pragma mark-actions
+- (IBAction)connectAction:(UIButton *)sender
+{
+    [self.codeTextField resignFirstResponder];//hide keyboard
+    if(![self isEmpty])
+    {
+            // to other view controller
+    }
+}
 #pragma mark - Segue
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+}
+#pragma mark-private method
+-(BOOL)isEmpty
+{
+    if (self.codeTextField.text.length == 0) {
+        
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle: @"Password"
+                                                                        message: @"Please enter a password."
+                                                                 preferredStyle: UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction actionWithTitle: @"Ok"
+                                                           style: UIAlertActionStyleDefault
+                                                         handler: ^(UIAlertAction * action) {
+                                                             
+                                                             [alert dismissViewControllerAnimated:YES completion:nil];
+                                                         }];
+        
+        [alert addAction:okButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        return YES;
+    }
+    return NO;
 }
 @end
