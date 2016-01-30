@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */; };
 		6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */; };
 		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
 		6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateClassUIViewController.h; path = Controllers/CreateClassUIViewController.h; sourceTree = "<group>"; };
+		5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateClassUIViewController.m; path = Controllers/CreateClassUIViewController.m; sourceTree = "<group>"; };
 		6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = Controllers/HomeUICollectionViewController.h; sourceTree = "<group>"; };
 		6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = Controllers/HomeUICollectionViewController.m; sourceTree = "<group>"; };
 		6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTestCreating.storyboard; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */,
 				C84F11521C5BA4D6001A3B5D /* SelectClassViewController.h */,
 				C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */,
+				5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */,
+				5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,
+				5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */,
 				6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */,
 				6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */,
 			);

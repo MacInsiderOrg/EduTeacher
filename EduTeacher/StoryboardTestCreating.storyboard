@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W0L-NJ-Jyl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Create ClassUI View Controller-->
+        <scene sceneID="fIM-xw-C7P">
+            <objects>
+                <viewController id="W0L-NJ-Jyl" customClass="CreateClassUIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhm-Eb-fFR"/>
+                        <viewControllerLayoutGuide type="bottom" id="I7f-JE-I3J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Th4-Op-N6I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxd-Ic-Gzq">
+                                <rect key="frame" x="150" y="231" width="300" height="46"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzV-cI-540">
+                                <rect key="frame" x="210" y="323" width="180" height="30"/>
+                                <color key="backgroundColor" red="0.45597759046052633" green="0.83611739309210431" blue="0.51372327302631504" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input your code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qxq-Zc-lUg">
+                                <rect key="frame" x="210" y="285" width="180" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="join"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58144646569302205" green="0.5" blue="0.71988704957460103" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qxq-Zc-lUg" firstAttribute="width" secondItem="Th4-Op-N6I" secondAttribute="width" multiplier="0.3" id="510-V3-H6b"/>
+                            <constraint firstItem="qxq-Zc-lUg" firstAttribute="centerY" secondItem="Th4-Op-N6I" secondAttribute="centerY" id="9jL-bw-XXH"/>
+                            <constraint firstItem="rzV-cI-540" firstAttribute="width" secondItem="qxq-Zc-lUg" secondAttribute="width" id="MjX-5U-DKu"/>
+                            <constraint firstItem="rzV-cI-540" firstAttribute="centerX" secondItem="Th4-Op-N6I" secondAttribute="centerX" id="QZP-cU-Rn1"/>
+                            <constraint firstItem="qxq-Zc-lUg" firstAttribute="centerX" secondItem="Th4-Op-N6I" secondAttribute="centerX" id="b8W-9y-qVc"/>
+                            <constraint firstItem="Jxd-Ic-Gzq" firstAttribute="width" secondItem="Th4-Op-N6I" secondAttribute="width" multiplier="0.5" id="hz7-VN-SkJ"/>
+                            <constraint firstItem="qxq-Zc-lUg" firstAttribute="top" secondItem="Jxd-Ic-Gzq" secondAttribute="bottom" constant="8" id="mfu-ZK-hyL"/>
+                            <constraint firstItem="Jxd-Ic-Gzq" firstAttribute="centerX" secondItem="Th4-Op-N6I" secondAttribute="centerX" id="t8I-dL-5KA"/>
+                            <constraint firstItem="rzV-cI-540" firstAttribute="top" secondItem="qxq-Zc-lUg" secondAttribute="bottom" constant="8" id="yYN-NX-dhc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="qxq-Zc-lUg" id="0ji-Rk-rWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3e-je-LSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="-3"/>
+        </scene>
+    </scenes>
 </document>
