@@ -6,11 +6,11 @@
 //  Copyright © 2016 Andrew Kochulab. All rights reserved.
 //
 
-#import "QuizUIViewController.h"
-@interface QuizUIViewController()
+#import "QuizViewController.h"
+@interface QuizViewController()
 
 @end
-@implementation QuizUIViewController
+@implementation QuizViewController
 - (IBAction)viewSubmitedQuizAction:(UIButton *)sender {
 }
 - (IBAction)addQuizAction:(UIButton *)sender {

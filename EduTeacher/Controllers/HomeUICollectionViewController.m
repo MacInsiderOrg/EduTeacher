@@ -12,6 +12,7 @@
 
 @implementation HomeUICollectionViewController
 
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,7 +75,7 @@
     return homeColectionCell;
 }
 
-#pragma mark-UICollectionViewDelegateFlowLayout
+#pragma mark -UICollectionViewDelegateFlowLayout
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [self.collectionViewLayout invalidateLayout];
@@ -99,9 +100,19 @@
     return UIEdgeInsetsMake(0,0,0,0);
 }
 
+#pragma mark - Colection view delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *segueIdentifiers = @[@"createClassSegueIdentifier",
+                                  @"chooseSubjectSegueIdentifier",
+                                  @"chooseSubjectSegueIdentifier",
+                                  @"chooseSubjectSegueIdentifier"];
+    [self performSegueWithIdentifier:[segueIdentifiers objectAtIndex:indexPath.row] sender:indexPath];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Current tag: %ld",(long)[sender tag]);
+    NSLog(@"Current tag: %ld",(long)[sender row]);
 }
 @end
 

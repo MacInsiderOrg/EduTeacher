@@ -6,14 +6,14 @@
 //  Copyright © 2016 Andrew Kochulab. All rights reserved.
 //
 
-#import "SubjectUICollectionViewController.h"
+#import "SubjectCollectionViewController.h"
 #import "SubjectUICollectionViewCell.h"
-@implementation SubjectUICollectionViewController
+@implementation SubjectCollectionViewController
 -(void)viewDidLoad
 {
     [super viewDidLoad];
     [self prepareColectionView];
-   }
+}
 #pragma mark-UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -75,7 +75,6 @@
     
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
-    
     self.collectionView.scrollEnabled = NO;
 
 }

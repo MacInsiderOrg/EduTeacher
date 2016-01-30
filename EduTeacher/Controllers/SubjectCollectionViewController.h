@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubjectUICollectionViewController : UICollectionViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface SubjectCollectionViewController : UICollectionViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 @property(strong,nonatomic)NSArray* subjectImagesArray;
 @end
