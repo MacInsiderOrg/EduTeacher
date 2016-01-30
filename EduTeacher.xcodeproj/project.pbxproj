@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D828DB31C5BE826008E5DE9 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */; };
+		6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */; };
 		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
 		6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */; };
 		6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D828DB11C5BE826008E5DE9 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = ../../HomeUICollectionViewController.h; sourceTree = "<group>"; };
-		6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = ../../HomeUICollectionViewController.m; sourceTree = "<group>"; };
+		6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = Controllers/HomeUICollectionViewController.h; sourceTree = "<group>"; };
+		6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = Controllers/HomeUICollectionViewController.m; sourceTree = "<group>"; };
 		6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTestCreating.storyboard; sourceTree = "<group>"; };
 		6D828DBA1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseClassCollectionViewCell.h; path = Views/ChooseClassCollectionViewCell.h; sourceTree = "<group>"; };
 		6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseClassCollectionViewCell.m; path = Views/ChooseClassCollectionViewCell.m; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		C84F11511C5BA45B001A3B5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D828DB11C5BE826008E5DE9 /* HomeUICollectionViewController.h */,
-				6D828DB21C5BE826008E5DE9 /* HomeUICollectionViewController.m */,
+				6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */,
+				6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */,
 				C84F11521C5BA4D6001A3B5D /* SelectClassViewController.h */,
 				C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */,
 			);
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D828DB31C5BE826008E5DE9 /* HomeUICollectionViewController.m in Sources */,
+				6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,
@@ -321,6 +321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -332,6 +333,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
