@@ -39,7 +39,7 @@ static NSCharacterSet* nonDigits;
     nonDigits=[[NSCharacterSet decimalDigitCharacterSet] invertedSet];
     if([string rangeOfCharacterFromSet:nonDigits].location==NSNotFound)//return true if we didnt find smth that isnt a number
     {
-        if([self.codeTextField.text length]<5)//in future need to change to appropriate length 
+        if([self.codeTextField.text length]<3)//the length of code is 3
         {
             self.codeTextField.text=[self.codeTextField.text stringByAppendingString:string];
         }

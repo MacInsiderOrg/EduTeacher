@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */; };
+		5EE68DBB1C5D1843004B9339 /* SubjectUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBA1C5D1843004B9339 /* SubjectUICollectionViewController.m */; };
+		5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */; };
+		5EE68DCA1C5D1D1E004B9339 /* additional.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC21C5D1D1E004B9339 /* additional.png */; };
+		5EE68DCB1C5D1D1E004B9339 /* biology.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC31C5D1D1E004B9339 /* biology.png */; };
+		5EE68DCC1C5D1D1E004B9339 /* chemistry.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC41C5D1D1E004B9339 /* chemistry.png */; };
+		5EE68DCD1C5D1D1E004B9339 /* create_class.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC51C5D1D1E004B9339 /* create_class.png */; };
+		5EE68DCE1C5D1D1E004B9339 /* drawing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC61C5D1D1E004B9339 /* drawing.png */; };
+		5EE68DCF1C5D1D1E004B9339 /* geography.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC71C5D1D1E004B9339 /* geography.png */; };
+		5EE68DD01C5D1D1E004B9339 /* geometry.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC81C5D1D1E004B9339 /* geometry.png */; };
+		5EE68DD11C5D1D1E004B9339 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DC91C5D1D1E004B9339 /* history.png */; };
+		5EE68DD71C5D1D2B004B9339 /* informatics.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DD21C5D1D2B004B9339 /* informatics.png */; };
+		5EE68DD81C5D1D2B004B9339 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DD31C5D1D2B004B9339 /* library.png */; };
+		5EE68DD91C5D1D2B004B9339 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DD41C5D1D2B004B9339 /* music.png */; };
+		5EE68DDA1C5D1D2B004B9339 /* notes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DD51C5D1D2B004B9339 /* notes.png */; };
+		5EE68DDB1C5D1D2B004B9339 /* Phisycs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE68DD61C5D1D2B004B9339 /* Phisycs.png */; };
+		5EE68DDE1C5D2C65004B9339 /* QuizUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DDD1C5D2C65004B9339 /* QuizUIViewController.m */; };
 		6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */; };
 		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
 		6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */; };
@@ -23,6 +39,25 @@
 /* Begin PBXFileReference section */
 		5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateClassUIViewController.h; path = Controllers/CreateClassUIViewController.h; sourceTree = "<group>"; };
 		5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateClassUIViewController.m; path = Controllers/CreateClassUIViewController.m; sourceTree = "<group>"; };
+		5EE68DB91C5D1843004B9339 /* SubjectUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectUICollectionViewController.h; path = Controllers/SubjectUICollectionViewController.h; sourceTree = "<group>"; };
+		5EE68DBA1C5D1843004B9339 /* SubjectUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectUICollectionViewController.m; path = Controllers/SubjectUICollectionViewController.m; sourceTree = "<group>"; };
+		5EE68DBC1C5D19B6004B9339 /* SubjectUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectUICollectionViewCell.h; path = Views/SubjectUICollectionViewCell.h; sourceTree = "<group>"; };
+		5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectUICollectionViewCell.m; path = Views/SubjectUICollectionViewCell.m; sourceTree = "<group>"; };
+		5EE68DC21C5D1D1E004B9339 /* additional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = additional.png; sourceTree = "<group>"; };
+		5EE68DC31C5D1D1E004B9339 /* biology.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biology.png; sourceTree = "<group>"; };
+		5EE68DC41C5D1D1E004B9339 /* chemistry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chemistry.png; sourceTree = "<group>"; };
+		5EE68DC51C5D1D1E004B9339 /* create_class.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_class.png; sourceTree = "<group>"; };
+		5EE68DC61C5D1D1E004B9339 /* drawing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawing.png; sourceTree = "<group>"; };
+		5EE68DC71C5D1D1E004B9339 /* geography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geography.png; sourceTree = "<group>"; };
+		5EE68DC81C5D1D1E004B9339 /* geometry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geometry.png; sourceTree = "<group>"; };
+		5EE68DC91C5D1D1E004B9339 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		5EE68DD21C5D1D2B004B9339 /* informatics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = informatics.png; sourceTree = "<group>"; };
+		5EE68DD31C5D1D2B004B9339 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
+		5EE68DD41C5D1D2B004B9339 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		5EE68DD51C5D1D2B004B9339 /* notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notes.png; sourceTree = "<group>"; };
+		5EE68DD61C5D1D2B004B9339 /* Phisycs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phisycs.png; sourceTree = "<group>"; };
+		5EE68DDC1C5D2C65004B9339 /* QuizUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizUIViewController.h; path = Controllers/QuizUIViewController.h; sourceTree = "<group>"; };
+		5EE68DDD1C5D2C65004B9339 /* QuizUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizUIViewController.m; path = Controllers/QuizUIViewController.m; sourceTree = "<group>"; };
 		6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = Controllers/HomeUICollectionViewController.h; sourceTree = "<group>"; };
 		6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = Controllers/HomeUICollectionViewController.m; sourceTree = "<group>"; };
 		6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTestCreating.storyboard; sourceTree = "<group>"; };
@@ -53,6 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EE68DC11C5D1CFB004B9339 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5EE68DD21C5D1D2B004B9339 /* informatics.png */,
+				5EE68DD31C5D1D2B004B9339 /* library.png */,
+				5EE68DD41C5D1D2B004B9339 /* music.png */,
+				5EE68DD51C5D1D2B004B9339 /* notes.png */,
+				5EE68DD61C5D1D2B004B9339 /* Phisycs.png */,
+				5EE68DC21C5D1D1E004B9339 /* additional.png */,
+				5EE68DC31C5D1D1E004B9339 /* biology.png */,
+				5EE68DC41C5D1D1E004B9339 /* chemistry.png */,
+				5EE68DC51C5D1D1E004B9339 /* create_class.png */,
+				5EE68DC61C5D1D1E004B9339 /* drawing.png */,
+				5EE68DC71C5D1D1E004B9339 /* geography.png */,
+				5EE68DC81C5D1D1E004B9339 /* geometry.png */,
+				5EE68DC91C5D1D1E004B9339 /* history.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		6D828DB91C5C0B03008E5DE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +115,8 @@
 				6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */,
 				6D828DBC1C5C0B8F008E5DE9 /* HomeCollectionViewCell.h */,
 				6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */,
+				5EE68DBC1C5D19B6004B9339 /* SubjectUICollectionViewCell.h */,
+				5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -83,6 +140,7 @@
 		C84F11371C5BA191001A3B5D /* EduTeacher */ = {
 			isa = PBXGroup;
 			children = (
+				5EE68DC11C5D1CFB004B9339 /* images */,
 				C84F113B1C5BA191001A3B5D /* AppDelegate.h */,
 				C84F113C1C5BA191001A3B5D /* AppDelegate.m */,
 				6D828DB91C5C0B03008E5DE9 /* Views */,
@@ -130,6 +188,10 @@
 				C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */,
 				5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */,
 				5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */,
+				5EE68DB91C5D1843004B9339 /* SubjectUICollectionViewController.h */,
+				5EE68DBA1C5D1843004B9339 /* SubjectUICollectionViewController.m */,
+				5EE68DDC1C5D2C65004B9339 /* QuizUIViewController.h */,
+				5EE68DDD1C5D2C65004B9339 /* QuizUIViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -191,10 +253,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE68DD71C5D1D2B004B9339 /* informatics.png in Resources */,
+				5EE68DD11C5D1D1E004B9339 /* history.png in Resources */,
 				C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */,
+				5EE68DDB1C5D1D2B004B9339 /* Phisycs.png in Resources */,
+				5EE68DD81C5D1D2B004B9339 /* library.png in Resources */,
 				C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */,
+				5EE68DDA1C5D1D2B004B9339 /* notes.png in Resources */,
+				5EE68DD91C5D1D2B004B9339 /* music.png in Resources */,
+				5EE68DD01C5D1D1E004B9339 /* geometry.png in Resources */,
+				5EE68DCC1C5D1D1E004B9339 /* chemistry.png in Resources */,
 				6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */,
+				5EE68DCF1C5D1D1E004B9339 /* geography.png in Resources */,
+				5EE68DCE1C5D1D1E004B9339 /* drawing.png in Resources */,
+				5EE68DCD1C5D1D1E004B9339 /* create_class.png in Resources */,
+				5EE68DCB1C5D1D1E004B9339 /* biology.png in Resources */,
 				C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */,
+				5EE68DCA1C5D1D1E004B9339 /* additional.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,10 +283,13 @@
 				6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
+				5EE68DDE1C5D2C65004B9339 /* QuizUIViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,
 				5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */,
+				5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */,
 				6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */,
 				6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */,
+				5EE68DBB1C5D1843004B9339 /* SubjectUICollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
