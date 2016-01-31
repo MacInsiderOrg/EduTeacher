@@ -157,6 +157,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D38E36B1C5E4D2900EC313D /* PDFOperations */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50BD1C5E37C2008940F7 /* Reading */,
+				C88E50BE1C5E37C7008940F7 /* Drawing */,
+				C88E50C11C5E38C8008940F7 /* Controllers */,
+				C88E50C01C5E38A4008940F7 /* Thumbnail */,
+				C88E50BF1C5E389B008940F7 /* Pagebar */,
+				C88E51181C5E3A10008940F7 /* Functions.h */,
+				C88E51191C5E3A10008940F7 /* Functions.m */,
+				C88E511B1C5E3AC9008940F7 /* UIImage+Overlay.h */,
+				C88E511C1C5E3AC9008940F7 /* UIImage+Overlay.m */,
+			);
+			name = PDFOperations;
+			sourceTree = "<group>";
+		};
 		6D828DB91C5C0B03008E5DE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,10 +207,10 @@
 			children = (
 				C84F113B1C5BA191001A3B5D /* AppDelegate.h */,
 				C84F113C1C5BA191001A3B5D /* AppDelegate.m */,
+				C84F114F1C5BA44D001A3B5D /* Common */,
+				C84F11501C5BA455001A3B5D /* Resourses */,
 				6D828DB91C5C0B03008E5DE9 /* Views */,
 				C84F11511C5BA45B001A3B5D /* Controllers */,
-				C84F114F1C5BA44D001A3B5D /* Model */,
-				C84F11501C5BA455001A3B5D /* Resourses */,
 				C84F11381C5BA191001A3B5D /* Supporting Files */,
 			);
 			path = EduTeacher;
@@ -210,20 +226,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C84F114F1C5BA44D001A3B5D /* Model */ = {
+		C84F114F1C5BA44D001A3B5D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C88E50BD1C5E37C2008940F7 /* Reading */,
-				C88E50BE1C5E37C7008940F7 /* Drawing */,
-				C88E50C11C5E38C8008940F7 /* Controllers */,
-				C88E50C01C5E38A4008940F7 /* Thumbnail */,
-				C88E50BF1C5E389B008940F7 /* Pagebar */,
-				C88E51181C5E3A10008940F7 /* Functions.h */,
-				C88E51191C5E3A10008940F7 /* Functions.m */,
-				C88E511B1C5E3AC9008940F7 /* UIImage+Overlay.h */,
-				C88E511C1C5E3AC9008940F7 /* UIImage+Overlay.m */,
+				6D38E36B1C5E4D2900EC313D /* PDFOperations */,
 			);
-			name = Model;
+			name = Common;
 			sourceTree = "<group>";
 		};
 		C84F11501C5BA455001A3B5D /* Resourses */ = {
