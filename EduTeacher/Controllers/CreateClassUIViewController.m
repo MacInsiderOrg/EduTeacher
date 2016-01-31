@@ -33,19 +33,14 @@ static NSCharacterSet* nonDigits;
     }
     return YES;
 }
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string   // return NO to not change text
-//call when we write some charackter in text field
-{
-    nonDigits=[[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-    if([string rangeOfCharacterFromSet:nonDigits].location==NSNotFound)//return true if we didnt find smth that isnt a number
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSCharacterSet *includeSet = [NSCharacterSet decimalDigitCharacterSet];
+    if ([[string stringByTrimmingCharactersInSet:includeSet] length] > 0)
     {
-        if([self.codeTextField.text length]<3)//the length of code is 3
-        {
-            self.codeTextField.text=[self.codeTextField.text stringByAppendingString:string];
-        }
+        return NO;
     }
-
-    return  NO;
+    return YES;
 }
 #pragma mark-actions
 - (IBAction)connectAction:(UIButton *)sender
