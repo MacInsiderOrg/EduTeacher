@@ -71,26 +71,17 @@
 #pragma mark-private method
 - (void) prepareColectionView
 {
-   /* self.subjectImagesArray =[[NSArray alloc]initWithObjects:
-                              [UIImage imageNamed:@"biology"],
-                              [UIImage imageNamed:@"chemistry"],
-                              [UIImage imageNamed:@"drawing"],
-                              [UIImage imageNamed:@"geography"],
-                              [UIImage imageNamed:@"geometry"],
-                              [UIImage imageNamed:@"history"],
-                              [UIImage imageNamed:@"informatics"],
-                              [UIImage imageNamed:@"music"],
-                              [UIImage imageNamed:@"physics"], nil];*/
+    self.navigationItem.title=@"Subjects";
     self.subjectNamesArray=[[NSArray alloc]initWithObjects:
-                            @"biology",
-                            @"chemistry",
-                            @"drawing",
-                            @"geography",
-                            @"geometry",
-                            @"history",
-                            @"informatics",
-                            @"music",
-                            @"physics", nil];
+                            @"Biology",
+                            @"Chemistry",
+                            @"Drawing",
+                            @"Geography",
+                            @"Geometry",
+                            @"History",
+                            @"Informatics",
+                            @"Music",
+                            @"Physics", nil];
     NSMutableArray* tmpArr=[[NSMutableArray alloc]init];
     
     for(NSString* name in self.subjectNamesArray)

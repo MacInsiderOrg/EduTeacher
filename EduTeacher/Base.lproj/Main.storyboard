@@ -76,9 +76,9 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ak5-EZ-vec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2963" y="239"/>
+            <point key="canvasLocation" x="3014" y="239"/>
         </scene>
-        <!--HomeUI Collection View Controller-->
+        <!--Home menu-->
         <scene sceneID="Hr2-Sh-XcK">
             <objects>
                 <collectionViewController id="ZFO-vx-zj9" customClass="HomeUICollectionViewController" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                             <outlet property="delegate" destination="ZFO-vx-zj9" id="cxU-7Y-DNJ"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="6Ti-Ya-UNU"/>
+                    <navigationItem key="navigationItem" title="Home menu" id="6Ti-Ya-UNU"/>
                     <connections>
                         <segue destination="eIe-3s-iVb" kind="show" identifier="createClassSegueIdentifier" id="IUn-Nk-WBZ"/>
                         <segue destination="dc6-Mb-zxU" kind="show" identifier="chooseSubjectSegueIdentifier" id="tIe-Sz-2cj"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1265" y="4"/>
         </scene>
-        <!--Create ClassUI View Controller-->
+        <!--Create class-->
         <scene sceneID="OhG-Q9-e30">
             <objects>
                 <viewController id="eIe-3s-iVb" customClass="CreateClassUIViewController" sceneMemberID="viewController">
@@ -188,7 +188,7 @@
                             <constraint firstItem="nGc-Mh-oM6" firstAttribute="centerX" secondItem="pI4-LZ-DXy" secondAttribute="centerX" id="uWm-HC-6DZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Y0s-2X-FvI"/>
+                    <navigationItem key="navigationItem" title="Create class" id="Y0s-2X-FvI"/>
                     <connections>
                         <outlet property="codeTextField" destination="nGc-Mh-oM6" id="UN6-MG-hQ3"/>
                     </connections>
@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="3649" y="-486"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--Quiz options-->
         <scene sceneID="AGq-TT-uH4">
             <objects>
                 <viewController id="FwF-sM-BFT" customClass="QuizViewController" sceneMemberID="viewController">
@@ -372,7 +372,7 @@
                             <constraint firstItem="eat-Ua-lWP" firstAttribute="width" secondItem="RgI-jM-DAz" secondAttribute="width" id="xhC-qm-XQX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ryw-Z4-151"/>
+                    <navigationItem key="navigationItem" title="Quiz options" id="Ryw-Z4-151"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlF-Hd-FGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,13 +17,22 @@
 {
     [super viewDidLoad];
     [self prepareColectionView];
+    
 }
 
-
+-(void)viewWillAppear:(BOOL)animated
+{
+   [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+}
 - (void) prepareColectionView {
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
     self.collectionView.scrollEnabled = NO;
+
     self.topicsNamesArray=@[@"Create class",@"Notes",@"Library",@"Additional"];
     self.backGroundsColorsArray=@[[UIColor colorWithRed:1.f
                                                   green:0.858f
@@ -113,7 +122,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Current tag: %ld",(long)[sender row]);
-}
+    }
 @end
 
 
