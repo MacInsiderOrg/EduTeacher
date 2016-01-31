@@ -10,4 +10,5 @@
 
 @interface SubjectCollectionViewController : UICollectionViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 @property(strong,nonatomic)NSArray* subjectImagesArray;
+@property(strong,nonatomic)NSArray* subjectNamesArray;
 @end

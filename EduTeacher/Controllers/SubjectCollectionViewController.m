@@ -32,9 +32,18 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SubjectUICollectionViewCell* subjectCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"SubjectIdentifier" forIndexPath:indexPath];
+    if(indexPath.row%2==0)
+    {
+        subjectCell.backgroundColor= [UIColor colorWithRed: .843f green: .843f blue: .863f alpha: 1.f];
+    }
+    else
+    {
+        subjectCell.backgroundColor=[UIColor whiteColor];
+    }
+        subjectCell.subjectImageView.contentMode = UIViewContentModeCenter;
     subjectCell.subjectImageView.image=[self.subjectImagesArray objectAtIndex:indexPath.row];
-    subjectCell.subjectImageView.contentMode = UIViewContentModeCenter;
 
+    subjectCell.subjecNameLabel.text=[self.subjectNamesArray objectAtIndex:indexPath.row];
     subjectCell.tag=indexPath.row;
     return  subjectCell;
 }
@@ -62,7 +71,7 @@
 #pragma mark-private method
 - (void) prepareColectionView
 {
-    self.subjectImagesArray =[[NSArray alloc]initWithObjects:
+   /* self.subjectImagesArray =[[NSArray alloc]initWithObjects:
                               [UIImage imageNamed:@"biology"],
                               [UIImage imageNamed:@"chemistry"],
                               [UIImage imageNamed:@"drawing"],
@@ -71,7 +80,24 @@
                               [UIImage imageNamed:@"history"],
                               [UIImage imageNamed:@"informatics"],
                               [UIImage imageNamed:@"music"],
-                              [UIImage imageNamed:@"physics"], nil];
+                              [UIImage imageNamed:@"physics"], nil];*/
+    self.subjectNamesArray=[[NSArray alloc]initWithObjects:
+                            @"biology",
+                            @"chemistry",
+                            @"drawing",
+                            @"geography",
+                            @"geometry",
+                            @"history",
+                            @"informatics",
+                            @"music",
+                            @"physics", nil];
+    NSMutableArray* tmpArr=[[NSMutableArray alloc]init];
+    
+    for(NSString* name in self.subjectNamesArray)
+    {
+        [tmpArr addObject:[UIImage imageNamed:name]];
+    }
+    self.subjectImagesArray=[[NSArray alloc]initWithArray:tmpArr copyItems:YES];
     
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;

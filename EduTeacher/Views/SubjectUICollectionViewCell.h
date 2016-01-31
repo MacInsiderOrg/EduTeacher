@@ -10,5 +10,6 @@
 
 @interface SubjectUICollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
+@property (weak, nonatomic) IBOutlet UILabel *subjecNameLabel;
 
 @end

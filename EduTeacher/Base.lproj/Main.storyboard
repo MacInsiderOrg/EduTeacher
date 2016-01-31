@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="epA-Af-cYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="epA-Af-cYj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -219,19 +219,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="235" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZ2-yq-jAx">
+                                            <rect key="frame" x="47" y="152" width="140" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1uV-ve-sTM">
-                                            <rect key="frame" x="8" y="8" width="219" height="174"/>
+                                            <rect key="frame" x="8" y="8" width="219" height="133"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="1uV-ve-sTM" secondAttribute="trailing" id="LWP-C8-QgX"/>
-                                    <constraint firstItem="1uV-ve-sTM" firstAttribute="leading" secondItem="sHF-Mo-Zwm" secondAttribute="leadingMargin" id="SZu-ot-EHw"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="1uV-ve-sTM" secondAttribute="bottom" id="YJD-Xn-076"/>
-                                    <constraint firstItem="1uV-ve-sTM" firstAttribute="top" secondItem="sHF-Mo-Zwm" secondAttribute="topMargin" id="rcA-E8-tbY"/>
+                                    <constraint firstItem="JZ2-yq-jAx" firstAttribute="leading" secondItem="sHF-Mo-Zwm" secondAttribute="leadingMargin" constant="39" id="6xq-9z-fsX"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="1uV-ve-sTM" secondAttribute="leading" id="LoA-lh-YgK"/>
+                                    <constraint firstItem="JZ2-yq-jAx" firstAttribute="top" secondItem="1uV-ve-sTM" secondAttribute="bottom" constant="11" id="Yd2-45-Agn"/>
+                                    <constraint firstItem="1uV-ve-sTM" firstAttribute="height" secondItem="sHF-Mo-Zwm" secondAttribute="height" multiplier="0.7" id="abi-nd-iI6"/>
+                                    <constraint firstAttribute="topMargin" secondItem="1uV-ve-sTM" secondAttribute="top" id="eGR-ZE-w9K"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="1uV-ve-sTM" secondAttribute="trailing" id="hYN-RF-UgQ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="JZ2-yq-jAx" secondAttribute="trailing" constant="40" id="n5M-gY-c5N"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="JZ2-yq-jAx" secondAttribute="bottom" constant="9" id="njM-nh-Llj"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="subjecNameLabel" destination="JZ2-yq-jAx" id="YJJ-0G-FvY"/>
                                     <outlet property="subjectImageView" destination="1uV-ve-sTM" id="pTm-57-FTi"/>
                                     <segue destination="TH5-rk-enk" kind="show" id="ai7-Gl-esl"/>
                                 </connections>
