@@ -86,7 +86,7 @@
     
     for(NSString* name in self.subjectNamesArray)
     {
-        [tmpArr addObject:[UIImage imageNamed:name]];
+        [tmpArr addObject:[UIImage imageNamed: [name lowercaseString]]];
     }
     self.subjectImagesArray=[[NSArray alloc]initWithArray:tmpArr copyItems:YES];
     

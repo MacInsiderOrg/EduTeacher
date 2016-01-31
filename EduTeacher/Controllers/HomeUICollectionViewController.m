@@ -22,11 +22,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-   [[self navigationController] setNavigationBarHidden:YES animated:YES];
+   //[[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    //[[self navigationController] setNavigationBarHidden:NO animated:YES];
 }
 - (void) prepareColectionView {
     self.collectionView.delegate=self;
