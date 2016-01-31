@@ -78,8 +78,13 @@
 
 #pragma mark - Segue
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (indexPath.row == 3) {
+        [self performSegueWithIdentifier: @"OpenQuizesIdentifier" sender: indexPath];
+    } else {
+        [self performSegueWithIdentifier: @"ChooseFileIdentifier" sender: indexPath];
+    }
 }
 
 @end

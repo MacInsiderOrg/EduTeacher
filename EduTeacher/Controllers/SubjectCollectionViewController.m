@@ -71,7 +71,7 @@
                               [UIImage imageNamed:@"history"],
                               [UIImage imageNamed:@"informatics"],
                               [UIImage imageNamed:@"music"],
-                              [UIImage imageNamed:@"Phisycs"], nil];
+                              [UIImage imageNamed:@"physics"], nil];
     
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;

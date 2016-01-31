@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="epA-Af-cYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="epA-Af-cYj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-nX-x2t">
                                             <rect key="frame" x="93" y="56" width="39" height="96"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="70"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -59,7 +59,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="classNumber" destination="3YC-nX-x2t" id="wm5-8Q-Mme"/>
-                                    <segue destination="FwF-sM-BFT" kind="show" id="fF5-Pv-MYI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -70,10 +69,14 @@
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Select Class Number" id="g86-qi-e6H"/>
+                    <connections>
+                        <segue destination="FwF-sM-BFT" kind="show" identifier="OpenQuizesIdentifier" id="ZvV-ON-9Rr"/>
+                        <segue destination="eYj-Ua-xTx" kind="show" identifier="ChooseFileIdentifier" id="QQe-4I-uAL"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ak5-EZ-vec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2939" y="239"/>
+            <point key="canvasLocation" x="2963" y="239"/>
         </scene>
         <!--HomeUI Collection View Controller-->
         <scene sceneID="Hr2-Sh-XcK">
@@ -99,7 +102,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-VX-6zV">
                                             <rect key="frame" x="60" y="264" width="217" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Mc-SD-T0q">
@@ -243,6 +246,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vH-g0-6DD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2219" y="239"/>
+        </scene>
+        <!--Choose file-->
+        <scene sceneID="haN-Ny-C1g">
+            <objects>
+                <viewController id="eYj-Ua-xTx" customClass="ChooseFileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MiX-vQ-Dkz"/>
+                        <viewControllerLayoutGuide type="bottom" id="fj2-aT-T9V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xC9-EZ-t8t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose file" id="wrY-Tw-i64"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFi-GW-2cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649" y="-486"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="AGq-TT-uH4">
