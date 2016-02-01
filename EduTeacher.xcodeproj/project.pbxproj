@@ -7,15 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */; };
+		5EE68DBB1C5D1843004B9339 /* SubjectCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBA1C5D1843004B9339 /* SubjectCollectionViewController.m */; };
+		5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */; };
+		5EE68DDE1C5D2C65004B9339 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DDD1C5D2C65004B9339 /* QuizViewController.m */; };
+		6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */; };
+		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
+		6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */; };
+		6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */; };
+		C8454A3F1C5EBE3300ADD6F0 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = C8454A3D1C5EBE3300ADD6F0 /* File.m */; };
 		C84F113A1C5BA191001A3B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11391C5BA191001A3B5D /* main.m */; };
 		C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F113C1C5BA191001A3B5D /* AppDelegate.m */; };
 		C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11411C5BA191001A3B5D /* Main.storyboard */; };
 		C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84F11441C5BA191001A3B5D /* Assets.xcassets */; };
 		C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */; };
 		C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */; };
+		C88E50D01C5E38DE008940F7 /* DrawingEllipseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50C41C5E38DE008940F7 /* DrawingEllipseTool.m */; };
+		C88E50D11C5E38DE008940F7 /* DrawingEraserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50C61C5E38DE008940F7 /* DrawingEraserTool.m */; };
+		C88E50D21C5E38DE008940F7 /* DrawingLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50C81C5E38DE008940F7 /* DrawingLineTool.m */; };
+		C88E50D31C5E38DE008940F7 /* DrawingPenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50CA1C5E38DE008940F7 /* DrawingPenTool.m */; };
+		C88E50D41C5E38DE008940F7 /* DrawingRectangleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50CC1C5E38DE008940F7 /* DrawingRectangleTool.m */; };
+		C88E50D51C5E38DE008940F7 /* DrawingTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50CE1C5E38DE008940F7 /* DrawingTextTool.m */; };
+		C88E50DA1C5E38F6008940F7 /* DrawingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50D71C5E38F6008940F7 /* DrawingToolbar.m */; };
+		C88E50DB1C5E38F6008940F7 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50D91C5E38F6008940F7 /* DrawingView.m */; };
+		C88E50E41C5E3951008940F7 /* MainPagebar.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50DD1C5E3951008940F7 /* MainPagebar.m */; };
+		C88E50E51C5E3951008940F7 /* PagebarShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50DF1C5E3951008940F7 /* PagebarShadow.m */; };
+		C88E50E61C5E3951008940F7 /* PagebarThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50E11C5E3951008940F7 /* PagebarThumb.m */; };
+		C88E50E71C5E3951008940F7 /* PagebarTrackControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50E31C5E3951008940F7 /* PagebarTrackControl.m */; };
+		C88E50F41C5E3979008940F7 /* ContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50E91C5E3979008940F7 /* ContentPage.m */; };
+		C88E50F51C5E3979008940F7 /* ContentThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50EB1C5E3979008940F7 /* ContentThumb.m */; };
+		C88E50F61C5E3979008940F7 /* ContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50ED1C5E3979008940F7 /* ContentTile.m */; };
+		C88E50F71C5E3979008940F7 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50EF1C5E3979008940F7 /* ContentView.m */; };
+		C88E50F81C5E3979008940F7 /* PDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50F11C5E3979008940F7 /* PDFDocument.m */; };
+		C88E50F91C5E3979008940F7 /* PDFDocumentLink.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50F31C5E3979008940F7 /* PDFDocumentLink.m */; };
+		C88E51081C5E39AB008940F7 /* ThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50FB1C5E39AB008940F7 /* ThumbCache.m */; };
+		C88E51091C5E39AB008940F7 /* ThumbFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50FD1C5E39AB008940F7 /* ThumbFetch.m */; };
+		C88E510A1C5E39AB008940F7 /* ThumbOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E50FF1C5E39AB008940F7 /* ThumbOperation.m */; };
+		C88E510B1C5E39AB008940F7 /* ThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51011C5E39AB008940F7 /* ThumbQueue.m */; };
+		C88E510C1C5E39AB008940F7 /* ThumbRender.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51031C5E39AB008940F7 /* ThumbRender.m */; };
+		C88E510D1C5E39AB008940F7 /* ThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51051C5E39AB008940F7 /* ThumbRequest.m */; };
+		C88E510E1C5E39AB008940F7 /* ThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51071C5E39AB008940F7 /* ThumbView.m */; };
+		C88E511A1C5E3A10008940F7 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51191C5E3A10008940F7 /* Functions.m */; };
+		C88E511D1C5E3AC9008940F7 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E511C1C5E3AC9008940F7 /* UIImage+Overlay.m */; };
+		C88E51221C5E3C7C008940F7 /* PDFDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E511F1C5E3C7C008940F7 /* PDFDocumentViewController.m */; };
+		C88E51231C5E3C7C008940F7 /* ToolPropertiesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51211C5E3C7C008940F7 /* ToolPropertiesController.m */; };
+		C88E51261C5E3D27008940F7 /* ChooseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */; };
+		C88E51291C5E3F49008940F7 /* Programming in Objective-C.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C88E51271C5E3F49008940F7 /* Programming in Objective-C.pdf */; };
+		C88E512A1C5E3F49008940F7 /* SwiftLanguage.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C88E51281C5E3F49008940F7 /* SwiftLanguage.pdf */; };
+		C892248C1C5E9046004CBD8F /* PDFModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C892248A1C5E9046004CBD8F /* PDFModel.xcdatamodeld */; };
+		C89224931C5EA2D4004CBD8F /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C89224911C5EA2D4004CBD8F /* Annotation.m */; };
+		C892249C1C5EB052004CBD8F /* PDFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C892249B1C5EB052004CBD8F /* PDFDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateClassUIViewController.h; path = Controllers/CreateClassUIViewController.h; sourceTree = "<group>"; };
+		5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateClassUIViewController.m; path = Controllers/CreateClassUIViewController.m; sourceTree = "<group>"; };
+		5EE68DB91C5D1843004B9339 /* SubjectCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectCollectionViewController.h; path = Controllers/SubjectCollectionViewController.h; sourceTree = "<group>"; };
+		5EE68DBA1C5D1843004B9339 /* SubjectCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectCollectionViewController.m; path = Controllers/SubjectCollectionViewController.m; sourceTree = "<group>"; };
+		5EE68DBC1C5D19B6004B9339 /* SubjectUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectUICollectionViewCell.h; path = Views/SubjectUICollectionViewCell.h; sourceTree = "<group>"; };
+		5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectUICollectionViewCell.m; path = Views/SubjectUICollectionViewCell.m; sourceTree = "<group>"; };
+		5EE68DDC1C5D2C65004B9339 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = Controllers/QuizViewController.h; sourceTree = "<group>"; };
+		5EE68DDD1C5D2C65004B9339 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = Controllers/QuizViewController.m; sourceTree = "<group>"; };
+		6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUICollectionViewController.h; path = Controllers/HomeUICollectionViewController.h; sourceTree = "<group>"; };
+		6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUICollectionViewController.m; path = Controllers/HomeUICollectionViewController.m; sourceTree = "<group>"; };
+		6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTestCreating.storyboard; sourceTree = "<group>"; };
+		6D828DBA1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseClassCollectionViewCell.h; path = Views/ChooseClassCollectionViewCell.h; sourceTree = "<group>"; };
+		6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseClassCollectionViewCell.m; path = Views/ChooseClassCollectionViewCell.m; sourceTree = "<group>"; };
+		6D828DBC1C5C0B8F008E5DE9 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionViewCell.h; path = Views/HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionViewCell.m; path = Views/HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		C8454A3C1C5EBE3300ADD6F0 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = File.h; path = Model/CoreData/File.h; sourceTree = "<group>"; };
+		C8454A3D1C5EBE3300ADD6F0 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = File.m; path = Model/CoreData/File.m; sourceTree = "<group>"; };
 		C84F11351C5BA191001A3B5D /* EduTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F11391C5BA191001A3B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C84F113B1C5BA191001A3B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +87,74 @@
 		C84F11491C5BA191001A3B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84F11521C5BA4D6001A3B5D /* SelectClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectClassViewController.h; path = Controllers/SelectClassViewController.h; sourceTree = "<group>"; };
 		C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectClassViewController.m; path = Controllers/SelectClassViewController.m; sourceTree = "<group>"; };
+		C88E50C31C5E38DE008940F7 /* DrawingEllipseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingEllipseTool.h; path = Model/Drawing/Tools/DrawingEllipseTool.h; sourceTree = "<group>"; };
+		C88E50C41C5E38DE008940F7 /* DrawingEllipseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingEllipseTool.m; path = Model/Drawing/Tools/DrawingEllipseTool.m; sourceTree = "<group>"; };
+		C88E50C51C5E38DE008940F7 /* DrawingEraserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingEraserTool.h; path = Model/Drawing/Tools/DrawingEraserTool.h; sourceTree = "<group>"; };
+		C88E50C61C5E38DE008940F7 /* DrawingEraserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingEraserTool.m; path = Model/Drawing/Tools/DrawingEraserTool.m; sourceTree = "<group>"; };
+		C88E50C71C5E38DE008940F7 /* DrawingLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingLineTool.h; path = Model/Drawing/Tools/DrawingLineTool.h; sourceTree = "<group>"; };
+		C88E50C81C5E38DE008940F7 /* DrawingLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingLineTool.m; path = Model/Drawing/Tools/DrawingLineTool.m; sourceTree = "<group>"; };
+		C88E50C91C5E38DE008940F7 /* DrawingPenTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingPenTool.h; path = Model/Drawing/Tools/DrawingPenTool.h; sourceTree = "<group>"; };
+		C88E50CA1C5E38DE008940F7 /* DrawingPenTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingPenTool.m; path = Model/Drawing/Tools/DrawingPenTool.m; sourceTree = "<group>"; };
+		C88E50CB1C5E38DE008940F7 /* DrawingRectangleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingRectangleTool.h; path = Model/Drawing/Tools/DrawingRectangleTool.h; sourceTree = "<group>"; };
+		C88E50CC1C5E38DE008940F7 /* DrawingRectangleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingRectangleTool.m; path = Model/Drawing/Tools/DrawingRectangleTool.m; sourceTree = "<group>"; };
+		C88E50CD1C5E38DE008940F7 /* DrawingTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingTextTool.h; path = Model/Drawing/Tools/DrawingTextTool.h; sourceTree = "<group>"; };
+		C88E50CE1C5E38DE008940F7 /* DrawingTextTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingTextTool.m; path = Model/Drawing/Tools/DrawingTextTool.m; sourceTree = "<group>"; };
+		C88E50CF1C5E38DE008940F7 /* DrawingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingTool.h; path = Model/Drawing/Tools/DrawingTool.h; sourceTree = "<group>"; };
+		C88E50D61C5E38F6008940F7 /* DrawingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingToolbar.h; path = Model/Drawing/DrawingToolbar.h; sourceTree = "<group>"; };
+		C88E50D71C5E38F6008940F7 /* DrawingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingToolbar.m; path = Model/Drawing/DrawingToolbar.m; sourceTree = "<group>"; };
+		C88E50D81C5E38F6008940F7 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingView.h; path = Model/Drawing/DrawingView.h; sourceTree = "<group>"; };
+		C88E50D91C5E38F6008940F7 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingView.m; path = Model/Drawing/DrawingView.m; sourceTree = "<group>"; };
+		C88E50DC1C5E3951008940F7 /* MainPagebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainPagebar.h; path = Model/Pagebar/MainPagebar.h; sourceTree = "<group>"; };
+		C88E50DD1C5E3951008940F7 /* MainPagebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainPagebar.m; path = Model/Pagebar/MainPagebar.m; sourceTree = "<group>"; };
+		C88E50DE1C5E3951008940F7 /* PagebarShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagebarShadow.h; path = Model/Pagebar/PagebarShadow.h; sourceTree = "<group>"; };
+		C88E50DF1C5E3951008940F7 /* PagebarShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagebarShadow.m; path = Model/Pagebar/PagebarShadow.m; sourceTree = "<group>"; };
+		C88E50E01C5E3951008940F7 /* PagebarThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagebarThumb.h; path = Model/Pagebar/PagebarThumb.h; sourceTree = "<group>"; };
+		C88E50E11C5E3951008940F7 /* PagebarThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagebarThumb.m; path = Model/Pagebar/PagebarThumb.m; sourceTree = "<group>"; };
+		C88E50E21C5E3951008940F7 /* PagebarTrackControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagebarTrackControl.h; path = Model/Pagebar/PagebarTrackControl.h; sourceTree = "<group>"; };
+		C88E50E31C5E3951008940F7 /* PagebarTrackControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagebarTrackControl.m; path = Model/Pagebar/PagebarTrackControl.m; sourceTree = "<group>"; };
+		C88E50E81C5E3979008940F7 /* ContentPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentPage.h; path = Model/Reading/ContentPage.h; sourceTree = "<group>"; };
+		C88E50E91C5E3979008940F7 /* ContentPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentPage.m; path = Model/Reading/ContentPage.m; sourceTree = "<group>"; };
+		C88E50EA1C5E3979008940F7 /* ContentThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentThumb.h; path = Model/Reading/ContentThumb.h; sourceTree = "<group>"; };
+		C88E50EB1C5E3979008940F7 /* ContentThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentThumb.m; path = Model/Reading/ContentThumb.m; sourceTree = "<group>"; };
+		C88E50EC1C5E3979008940F7 /* ContentTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentTile.h; path = Model/Reading/ContentTile.h; sourceTree = "<group>"; };
+		C88E50ED1C5E3979008940F7 /* ContentTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentTile.m; path = Model/Reading/ContentTile.m; sourceTree = "<group>"; };
+		C88E50EE1C5E3979008940F7 /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentView.h; path = Model/Reading/ContentView.h; sourceTree = "<group>"; };
+		C88E50EF1C5E3979008940F7 /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentView.m; path = Model/Reading/ContentView.m; sourceTree = "<group>"; };
+		C88E50F01C5E3979008940F7 /* PDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFDocument.h; path = Model/Reading/PDFDocument.h; sourceTree = "<group>"; };
+		C88E50F11C5E3979008940F7 /* PDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFDocument.m; path = Model/Reading/PDFDocument.m; sourceTree = "<group>"; };
+		C88E50F21C5E3979008940F7 /* PDFDocumentLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFDocumentLink.h; path = Model/Reading/PDFDocumentLink.h; sourceTree = "<group>"; };
+		C88E50F31C5E3979008940F7 /* PDFDocumentLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFDocumentLink.m; path = Model/Reading/PDFDocumentLink.m; sourceTree = "<group>"; };
+		C88E50FA1C5E39AB008940F7 /* ThumbCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbCache.h; path = Model/Thumbnail/ThumbCache.h; sourceTree = "<group>"; };
+		C88E50FB1C5E39AB008940F7 /* ThumbCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbCache.m; path = Model/Thumbnail/ThumbCache.m; sourceTree = "<group>"; };
+		C88E50FC1C5E39AB008940F7 /* ThumbFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbFetch.h; path = Model/Thumbnail/ThumbFetch.h; sourceTree = "<group>"; };
+		C88E50FD1C5E39AB008940F7 /* ThumbFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbFetch.m; path = Model/Thumbnail/ThumbFetch.m; sourceTree = "<group>"; };
+		C88E50FE1C5E39AB008940F7 /* ThumbOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbOperation.h; path = Model/Thumbnail/ThumbOperation.h; sourceTree = "<group>"; };
+		C88E50FF1C5E39AB008940F7 /* ThumbOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbOperation.m; path = Model/Thumbnail/ThumbOperation.m; sourceTree = "<group>"; };
+		C88E51001C5E39AB008940F7 /* ThumbQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbQueue.h; path = Model/Thumbnail/ThumbQueue.h; sourceTree = "<group>"; };
+		C88E51011C5E39AB008940F7 /* ThumbQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbQueue.m; path = Model/Thumbnail/ThumbQueue.m; sourceTree = "<group>"; };
+		C88E51021C5E39AB008940F7 /* ThumbRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbRender.h; path = Model/Thumbnail/ThumbRender.h; sourceTree = "<group>"; };
+		C88E51031C5E39AB008940F7 /* ThumbRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbRender.m; path = Model/Thumbnail/ThumbRender.m; sourceTree = "<group>"; };
+		C88E51041C5E39AB008940F7 /* ThumbRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbRequest.h; path = Model/Thumbnail/ThumbRequest.h; sourceTree = "<group>"; };
+		C88E51051C5E39AB008940F7 /* ThumbRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbRequest.m; path = Model/Thumbnail/ThumbRequest.m; sourceTree = "<group>"; };
+		C88E51061C5E39AB008940F7 /* ThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbView.h; path = Model/Thumbnail/ThumbView.h; sourceTree = "<group>"; };
+		C88E51071C5E39AB008940F7 /* ThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbView.m; path = Model/Thumbnail/ThumbView.m; sourceTree = "<group>"; };
+		C88E51181C5E3A10008940F7 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Functions.h; path = Model/Functions.h; sourceTree = "<group>"; };
+		C88E51191C5E3A10008940F7 /* Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Functions.m; path = Model/Functions.m; sourceTree = "<group>"; };
+		C88E511B1C5E3AC9008940F7 /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Overlay.h"; path = "Model/UIImage+Overlay.h"; sourceTree = "<group>"; };
+		C88E511C1C5E3AC9008940F7 /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Overlay.m"; path = "Model/UIImage+Overlay.m"; sourceTree = "<group>"; };
+		C88E511E1C5E3C7C008940F7 /* PDFDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFDocumentViewController.h; path = Model/Controllers/PDFDocumentViewController.h; sourceTree = "<group>"; };
+		C88E511F1C5E3C7C008940F7 /* PDFDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFDocumentViewController.m; path = Model/Controllers/PDFDocumentViewController.m; sourceTree = "<group>"; };
+		C88E51201C5E3C7C008940F7 /* ToolPropertiesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolPropertiesController.h; path = Model/Controllers/ToolPropertiesController.h; sourceTree = "<group>"; };
+		C88E51211C5E3C7C008940F7 /* ToolPropertiesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolPropertiesController.m; path = Model/Controllers/ToolPropertiesController.m; sourceTree = "<group>"; };
+		C88E51241C5E3D27008940F7 /* ChooseFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseFileViewController.h; path = Controllers/ChooseFileViewController.h; sourceTree = "<group>"; };
+		C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseFileViewController.m; path = Controllers/ChooseFileViewController.m; sourceTree = "<group>"; };
+		C88E51271C5E3F49008940F7 /* Programming in Objective-C.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Programming in Objective-C.pdf"; path = "Documents/Programming in Objective-C.pdf"; sourceTree = "<group>"; };
+		C88E51281C5E3F49008940F7 /* SwiftLanguage.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = SwiftLanguage.pdf; path = Documents/SwiftLanguage.pdf; sourceTree = "<group>"; };
+		C892248B1C5E9046004CBD8F /* PDFModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDFModel.xcdatamodel; sourceTree = "<group>"; };
+		C89224901C5EA2D4004CBD8F /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Annotation.h; path = Model/CoreData/Annotation.h; sourceTree = "<group>"; };
+		C89224911C5EA2D4004CBD8F /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Annotation.m; path = Model/CoreData/Annotation.m; sourceTree = "<group>"; };
+		C892249A1C5EB052004CBD8F /* PDFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFDataManager.h; path = Model/CoreData/PDFDataManager.h; sourceTree = "<group>"; };
+		C892249B1C5EB052004CBD8F /* PDFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFDataManager.m; path = Model/CoreData/PDFDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +168,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D38E36B1C5E4D2900EC313D /* PDFOperations */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50BD1C5E37C2008940F7 /* Reading */,
+				C88E50BE1C5E37C7008940F7 /* Drawing */,
+				C88E50C11C5E38C8008940F7 /* Controllers */,
+				C88E50C01C5E38A4008940F7 /* Thumbnail */,
+				C88E50BF1C5E389B008940F7 /* Pagebar */,
+				C88E51181C5E3A10008940F7 /* Functions.h */,
+				C88E51191C5E3A10008940F7 /* Functions.m */,
+				C88E511B1C5E3AC9008940F7 /* UIImage+Overlay.h */,
+				C88E511C1C5E3AC9008940F7 /* UIImage+Overlay.m */,
+			);
+			name = PDFOperations;
+			sourceTree = "<group>";
+		};
+		6D828DB91C5C0B03008E5DE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D828DBA1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.h */,
+				6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */,
+				6D828DBC1C5C0B8F008E5DE9 /* HomeCollectionViewCell.h */,
+				6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */,
+				5EE68DBC1C5D19B6004B9339 /* SubjectUICollectionViewCell.h */,
+				5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C84F112C1C5BA191001A3B5D = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +218,11 @@
 			children = (
 				C84F113B1C5BA191001A3B5D /* AppDelegate.h */,
 				C84F113C1C5BA191001A3B5D /* AppDelegate.m */,
-				C84F114F1C5BA44D001A3B5D /* Model */,
-				C84F11501C5BA455001A3B5D /* Views */,
+				C89224891C5E8FE3004CBD8F /* CoreData */,
+				C84F114F1C5BA44D001A3B5D /* Common */,
+				C84F11501C5BA455001A3B5D /* Resourses */,
+				6D828DB91C5C0B03008E5DE9 /* Views */,
 				C84F11511C5BA45B001A3B5D /* Controllers */,
-				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
-				C84F11491C5BA191001A3B5D /* Info.plist */,
 				C84F11381C5BA191001A3B5D /* Supporting Files */,
 			);
 			path = EduTeacher;
@@ -73,34 +231,170 @@
 		C84F11381C5BA191001A3B5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
+				C84F11491C5BA191001A3B5D /* Info.plist */,
 				C84F11391C5BA191001A3B5D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C84F114F1C5BA44D001A3B5D /* Model */ = {
+		C84F114F1C5BA44D001A3B5D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6D38E36B1C5E4D2900EC313D /* PDFOperations */,
 			);
-			name = Model;
+			name = Common;
 			sourceTree = "<group>";
 		};
-		C84F11501C5BA455001A3B5D /* Views */ = {
+		C84F11501C5BA455001A3B5D /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
 				C84F11411C5BA191001A3B5D /* Main.storyboard */,
-				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
+				6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */,
+				C88E51271C5E3F49008940F7 /* Programming in Objective-C.pdf */,
+				C88E51281C5E3F49008940F7 /* SwiftLanguage.pdf */,
 			);
-			name = Views;
+			name = Resourses;
 			sourceTree = "<group>";
 		};
 		C84F11511C5BA45B001A3B5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D7A97B61C5CE34800587927 /* HomeUICollectionViewController.h */,
+				6D7A97B71C5CE34800587927 /* HomeUICollectionViewController.m */,
+				5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */,
+				5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */,
 				C84F11521C5BA4D6001A3B5D /* SelectClassViewController.h */,
 				C84F11531C5BA4D6001A3B5D /* SelectClassViewController.m */,
+				5EE68DB91C5D1843004B9339 /* SubjectCollectionViewController.h */,
+				5EE68DBA1C5D1843004B9339 /* SubjectCollectionViewController.m */,
+				5EE68DDC1C5D2C65004B9339 /* QuizViewController.h */,
+				5EE68DDD1C5D2C65004B9339 /* QuizViewController.m */,
+				C88E51241C5E3D27008940F7 /* ChooseFileViewController.h */,
+				C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C88E50BD1C5E37C2008940F7 /* Reading */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50E81C5E3979008940F7 /* ContentPage.h */,
+				C88E50E91C5E3979008940F7 /* ContentPage.m */,
+				C88E50EA1C5E3979008940F7 /* ContentThumb.h */,
+				C88E50EB1C5E3979008940F7 /* ContentThumb.m */,
+				C88E50EC1C5E3979008940F7 /* ContentTile.h */,
+				C88E50ED1C5E3979008940F7 /* ContentTile.m */,
+				C88E50EE1C5E3979008940F7 /* ContentView.h */,
+				C88E50EF1C5E3979008940F7 /* ContentView.m */,
+				C88E50F01C5E3979008940F7 /* PDFDocument.h */,
+				C88E50F11C5E3979008940F7 /* PDFDocument.m */,
+				C88E50F21C5E3979008940F7 /* PDFDocumentLink.h */,
+				C88E50F31C5E3979008940F7 /* PDFDocumentLink.m */,
+			);
+			name = Reading;
+			sourceTree = "<group>";
+		};
+		C88E50BE1C5E37C7008940F7 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50C21C5E38D4008940F7 /* Tools */,
+				C88E50D61C5E38F6008940F7 /* DrawingToolbar.h */,
+				C88E50D71C5E38F6008940F7 /* DrawingToolbar.m */,
+				C88E50D81C5E38F6008940F7 /* DrawingView.h */,
+				C88E50D91C5E38F6008940F7 /* DrawingView.m */,
+			);
+			name = Drawing;
+			sourceTree = "<group>";
+		};
+		C88E50BF1C5E389B008940F7 /* Pagebar */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50DC1C5E3951008940F7 /* MainPagebar.h */,
+				C88E50DD1C5E3951008940F7 /* MainPagebar.m */,
+				C88E50DE1C5E3951008940F7 /* PagebarShadow.h */,
+				C88E50DF1C5E3951008940F7 /* PagebarShadow.m */,
+				C88E50E01C5E3951008940F7 /* PagebarThumb.h */,
+				C88E50E11C5E3951008940F7 /* PagebarThumb.m */,
+				C88E50E21C5E3951008940F7 /* PagebarTrackControl.h */,
+				C88E50E31C5E3951008940F7 /* PagebarTrackControl.m */,
+			);
+			name = Pagebar;
+			sourceTree = "<group>";
+		};
+		C88E50C01C5E38A4008940F7 /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50FA1C5E39AB008940F7 /* ThumbCache.h */,
+				C88E50FB1C5E39AB008940F7 /* ThumbCache.m */,
+				C88E50FC1C5E39AB008940F7 /* ThumbFetch.h */,
+				C88E50FD1C5E39AB008940F7 /* ThumbFetch.m */,
+				C88E50FE1C5E39AB008940F7 /* ThumbOperation.h */,
+				C88E50FF1C5E39AB008940F7 /* ThumbOperation.m */,
+				C88E51001C5E39AB008940F7 /* ThumbQueue.h */,
+				C88E51011C5E39AB008940F7 /* ThumbQueue.m */,
+				C88E51021C5E39AB008940F7 /* ThumbRender.h */,
+				C88E51031C5E39AB008940F7 /* ThumbRender.m */,
+				C88E51041C5E39AB008940F7 /* ThumbRequest.h */,
+				C88E51051C5E39AB008940F7 /* ThumbRequest.m */,
+				C88E51061C5E39AB008940F7 /* ThumbView.h */,
+				C88E51071C5E39AB008940F7 /* ThumbView.m */,
+			);
+			name = Thumbnail;
+			sourceTree = "<group>";
+		};
+		C88E50C11C5E38C8008940F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C88E511E1C5E3C7C008940F7 /* PDFDocumentViewController.h */,
+				C88E511F1C5E3C7C008940F7 /* PDFDocumentViewController.m */,
+				C88E51201C5E3C7C008940F7 /* ToolPropertiesController.h */,
+				C88E51211C5E3C7C008940F7 /* ToolPropertiesController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C88E50C21C5E38D4008940F7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C88E50C31C5E38DE008940F7 /* DrawingEllipseTool.h */,
+				C88E50C41C5E38DE008940F7 /* DrawingEllipseTool.m */,
+				C88E50C51C5E38DE008940F7 /* DrawingEraserTool.h */,
+				C88E50C61C5E38DE008940F7 /* DrawingEraserTool.m */,
+				C88E50C71C5E38DE008940F7 /* DrawingLineTool.h */,
+				C88E50C81C5E38DE008940F7 /* DrawingLineTool.m */,
+				C88E50C91C5E38DE008940F7 /* DrawingPenTool.h */,
+				C88E50CA1C5E38DE008940F7 /* DrawingPenTool.m */,
+				C88E50CB1C5E38DE008940F7 /* DrawingRectangleTool.h */,
+				C88E50CC1C5E38DE008940F7 /* DrawingRectangleTool.m */,
+				C88E50CD1C5E38DE008940F7 /* DrawingTextTool.h */,
+				C88E50CE1C5E38DE008940F7 /* DrawingTextTool.m */,
+				C88E50CF1C5E38DE008940F7 /* DrawingTool.h */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		C89224891C5E8FE3004CBD8F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C892248D1C5EA2AE004CBD8F /* Models */,
+				C892248A1C5E9046004CBD8F /* PDFModel.xcdatamodeld */,
+				C892249A1C5EB052004CBD8F /* PDFDataManager.h */,
+				C892249B1C5EB052004CBD8F /* PDFDataManager.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		C892248D1C5EA2AE004CBD8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C89224901C5EA2D4004CBD8F /* Annotation.h */,
+				C89224911C5EA2D4004CBD8F /* Annotation.m */,
+				C8454A3C1C5EBE3300ADD6F0 /* File.h */,
+				C8454A3D1C5EBE3300ADD6F0 /* File.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +454,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88E51291C5E3F49008940F7 /* Programming in Objective-C.pdf in Resources */,
 				C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */,
+				C88E512A1C5E3F49008940F7 /* SwiftLanguage.pdf in Resources */,
 				C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */,
+				6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */,
 				C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,9 +470,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88E50E41C5E3951008940F7 /* MainPagebar.m in Sources */,
+				C88E50F81C5E3979008940F7 /* PDFDocument.m in Sources */,
+				C88E50D41C5E38DE008940F7 /* DrawingRectangleTool.m in Sources */,
+				C88E510C1C5E39AB008940F7 /* ThumbRender.m in Sources */,
+				C88E50F71C5E3979008940F7 /* ContentView.m in Sources */,
+				C89224931C5EA2D4004CBD8F /* Annotation.m in Sources */,
+				6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */,
+				C88E50E61C5E3951008940F7 /* PagebarThumb.m in Sources */,
+				C88E50F61C5E3979008940F7 /* ContentTile.m in Sources */,
+				C88E50F91C5E3979008940F7 /* PDFDocumentLink.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
+				C88E50E71C5E3951008940F7 /* PagebarTrackControl.m in Sources */,
+				C88E50D01C5E38DE008940F7 /* DrawingEllipseTool.m in Sources */,
+				C88E50DA1C5E38F6008940F7 /* DrawingToolbar.m in Sources */,
+				C88E510E1C5E39AB008940F7 /* ThumbView.m in Sources */,
+				C88E510B1C5E39AB008940F7 /* ThumbQueue.m in Sources */,
+				C88E50D21C5E38DE008940F7 /* DrawingLineTool.m in Sources */,
+				C88E511D1C5E3AC9008940F7 /* UIImage+Overlay.m in Sources */,
 				C84F11541C5BA4D6001A3B5D /* SelectClassViewController.m in Sources */,
+				C88E51261C5E3D27008940F7 /* ChooseFileViewController.m in Sources */,
+				5EE68DDE1C5D2C65004B9339 /* QuizViewController.m in Sources */,
 				C84F113A1C5BA191001A3B5D /* main.m in Sources */,
+				C88E51231C5E3C7C008940F7 /* ToolPropertiesController.m in Sources */,
+				C88E50D11C5E38DE008940F7 /* DrawingEraserTool.m in Sources */,
+				C892248C1C5E9046004CBD8F /* PDFModel.xcdatamodeld in Sources */,
+				5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */,
+				C892249C1C5EB052004CBD8F /* PDFDataManager.m in Sources */,
+				C88E510D1C5E39AB008940F7 /* ThumbRequest.m in Sources */,
+				C88E50DB1C5E38F6008940F7 /* DrawingView.m in Sources */,
+				5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */,
+				C88E50E51C5E3951008940F7 /* PagebarShadow.m in Sources */,
+				C88E50F41C5E3979008940F7 /* ContentPage.m in Sources */,
+				C88E50D51C5E38DE008940F7 /* DrawingTextTool.m in Sources */,
+				C88E50D31C5E38DE008940F7 /* DrawingPenTool.m in Sources */,
+				C8454A3F1C5EBE3300ADD6F0 /* File.m in Sources */,
+				C88E51081C5E39AB008940F7 /* ThumbCache.m in Sources */,
+				C88E50F51C5E3979008940F7 /* ContentThumb.m in Sources */,
+				6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */,
+				C88E510A1C5E39AB008940F7 /* ThumbOperation.m in Sources */,
+				C88E51091C5E39AB008940F7 /* ThumbFetch.m in Sources */,
+				C88E51221C5E3C7C008940F7 /* PDFDocumentViewController.m in Sources */,
+				C88E511A1C5E3A10008940F7 /* Functions.m in Sources */,
+				6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */,
+				5EE68DBB1C5D1843004B9339 /* SubjectCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,9 +626,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EduTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -299,9 +639,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EduTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -327,6 +669,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C892248A1C5E9046004CBD8F /* PDFModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C892248B1C5E9046004CBD8F /* PDFModel.xcdatamodel */,
+			);
+			currentVersion = C892248B1C5E9046004CBD8F /* PDFModel.xcdatamodel */;
+			name = PDFModel.xcdatamodeld;
+			path = Model/CoreData/PDFModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C84F112D1C5BA191001A3B5D /* Project object */;
 }
