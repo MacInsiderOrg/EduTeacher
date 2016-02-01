@@ -12,7 +12,7 @@
 
 @interface ChooseFileViewController ()
 
-@property (strong, nonatomic) NSArray* pdfDocuments;
+@property (strong, nonatomic) NSArray* documentsNames;
 
 @end
 
@@ -21,17 +21,43 @@
 
 #pragma mark - UIViewController methods
 
+- (NSArray *) getDocumentsNames {
+    
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex: 0];
+    NSError* error = nil;
+    
+    NSArray* extensionList = [NSArray arrayWithObjects: @"pdf", @"ppt", @"pptx", nil];
+    
+    NSArray* fileList = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: documentsDirectory error: &error];
+    
+    NSMutableArray* documentsNames = [NSMutableArray array];
+    
+    for(NSString* filepath in fileList) {
+        
+        if ([extensionList containsObject: [filepath pathExtension]]) {
+            
+            // Found Document with format from extensionList
+            [documentsNames addObject: filepath];
+        }
+    }
+
+    return documentsNames;
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad];
+   
+    // Get documents names
+    self.documentsNames = [self getDocumentsNames];
     
-    // Get all documents in current project
-    self.pdfDocuments = [[NSBundle mainBundle] pathsForResourcesOfType: @"pdf" inDirectory: nil];
-    
-    if (self.pdfDocuments != nil) {
+    NSLog(@"Lisf of Documents: %@", self.documentsNames);
+
+    if (self.documentsNames != nil) {
         
         // This is test
         // In future, we used tableview and select file by user clicked
-        NSString* filePath = [self.pdfDocuments firstObject];
+        NSString* filePath = [[NSHomeDirectory() stringByAppendingPathComponent: @"Documents"] stringByAppendingPathComponent: [self.documentsNames lastObject]];
         
         [self openDocument: filePath];
     }
