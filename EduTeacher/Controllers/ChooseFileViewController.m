@@ -10,7 +10,7 @@
 #import "PDFDocumentViewController.h"
 #import "PDFDocument.h"
 #import "CategoryUICollectionViewCell.h"
-@interface ChooseFileViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface ChooseFileViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
 @property (strong, nonatomic) NSArray* documentsNames;
 @property (weak, nonatomic) IBOutlet UICollectionView *categoryCollectionView;
@@ -76,12 +76,34 @@
     
     return documentsNames;
 }
+-(void)arrayWithFilter:(NSString*)filter
+{
+   
+    if(filter!=nil&& filter.length!=0)
+    {
+         NSMutableArray *newArr=[[NSMutableArray alloc]initWithArray:self.documentsNames];
+        for(NSString* name in self.documentsNames)
+        {
+            if([name rangeOfString:filter ].location==NSNotFound)
+            {
+                [newArr removeObject:name];
+            }
+        }
+        self.documentsNames=newArr;
+        
+    }
+    if(filter.length==0)
+    {
+        self.documentsNames=[self getDocumentsNames];
+    }
+}
 -(void)prepareView
 {
     self.categoryCollectionView.delegate=self;
     self.categoryCollectionView.dataSource=self;
     self.documentsTableView.dataSource=self;
     self.documentsTableView.delegate=self;
+    self.documentSearchBar.delegate=self;
     
     self.documentsNames = [self getDocumentsNames];// Get documents names
     self.categoryCollectionView.scrollEnabled=NO;
@@ -208,5 +230,23 @@
     }
     [self.documentsTableView deselectRowAtIndexPath:indexPath animated:YES];
 
+}
+#pragma mark-UISearchBarDelegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    [searchBar setShowsCancelButton:NO animated:YES];
+    self.documentsNames=[self getDocumentsNames];
+    [self.documentsTableView reloadData];
+}
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    NSLog(@"text change%@",searchText);
+    [self arrayWithFilter:searchText];
+    [self.documentsTableView reloadData];
 }
 @end
