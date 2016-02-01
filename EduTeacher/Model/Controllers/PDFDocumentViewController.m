@@ -376,11 +376,11 @@
     [contentView showPageThumb: fileURL page: page password: password guid: guid];
     
     // Get image from Data manager
-    //UIImage* image = [[PDFDataManager sharedInstance] getAnnotationImage: [self.document filePath]
-    //                                                            withPage: [NSNumber numberWithInteger: page]];
+    UIImage* image = [[PDFDataManager sharedInstance] getAnnotationImage: [self.document filePath]
+                                                                withPage: [NSNumber numberWithInteger: page]];
     
     // Setup image for content view
-    //[contentView setContentDrawingImageView: image];
+    [contentView setContentDrawingImageView: image];
 }
 
 - (void) layoutContentViews:(UIScrollView *)scrollView {
@@ -1108,7 +1108,7 @@
                         [annotationsDict setValue: self.document.fileSize forKey: @"fileSize"];
                         [annotationsDict setValue: self.document.pageCount forKey: @"pageCount"];
                         
-                        //[[PDFDataManager sharedInstance] addAnnotation: annotationsDict];
+                        [[PDFDataManager sharedInstance] addAnnotation: annotationsDict];
                         annotationsDict = nil;
                     }
                     
