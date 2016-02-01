@@ -8,20 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-// Delegate for everyones controllers,
-// which contained PDFDocumentViewController
-
-@class PDFDocumentViewController;
-
-@protocol PDFViewControllerDelegate <NSObject>
-
-@optional
-
-- (void) dismissPDFDocumentViewController:(PDFDocumentViewController *)viewController;
-
-@end
-
-
 // View Controller (displaying pdf document and given oportunity
 // to drawing elements in View
 
@@ -36,10 +22,6 @@
 @property (strong, nonatomic) NSNumber* lineWidth;
 @property (strong, nonatomic) NSNumber* lineAlpha;
 
-
-@property (weak, nonatomic) id <PDFViewControllerDelegate> delegate;
-
 - (instancetype) initWithPDFDocument:(PDFDocument *)document;
-
 
 @end

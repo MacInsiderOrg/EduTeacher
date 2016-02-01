@@ -10,7 +10,7 @@
 #import "PDFDocumentViewController.h"
 #import "PDFDocument.h"
 
-@interface ChooseFileViewController () <PDFViewControllerDelegate>
+@interface ChooseFileViewController ()
 
 @property (strong, nonatomic) NSArray* pdfDocuments;
 
@@ -51,8 +51,6 @@
         // Init PDFDocument VC with initial PDFDocument
         PDFDocumentViewController* pdfDocumentViewController = [[PDFDocumentViewController alloc] initWithPDFDocument: document];
         
-        pdfDocumentViewController.delegate = self;
-        
         // Push to drawing VC
         [self.navigationController pushViewController: pdfDocumentViewController animated: YES];
         
@@ -62,13 +60,5 @@
 }
 
 #pragma mark - UITableViewController methods
-
-#pragma mark - PDFViewControllerDelegate methods
-
-- (void) dismissPDFDocumentViewController:(PDFDocumentViewController *)viewController {
-    
-    [self.navigationController dismissViewControllerAnimated: YES completion: nil];
-}
-
 
 @end

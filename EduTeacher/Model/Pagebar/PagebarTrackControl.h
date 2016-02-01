@@ -1,5 +1,5 @@
 //
-//  TrackControl.h
+//  PagebarTrackControl.h
 //  EduTeacher
 //
 //  Created by Andrew Kochulab on 21.01.16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrackControl : UIControl
+@interface PagebarTrackControl : UIControl
 
 @property (assign, nonatomic) CGFloat value;
 

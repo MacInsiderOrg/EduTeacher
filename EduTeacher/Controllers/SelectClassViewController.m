@@ -9,7 +9,6 @@
 #import "SelectClassViewController.h"
 #import "ChooseClassCollectionViewCell.h"
 
-
 @implementation SelectClassViewController
 
 #pragma mark - UIViewController methods
@@ -22,7 +21,6 @@
 - (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 - (void) setBackgroundColor {
     self.classNumbers = [NSMutableArray array];
@@ -38,7 +36,6 @@
     [self.collectionViewLayout invalidateLayout];
 }
 
-
 #pragma mark - UICollectionViewDelegate methods
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -52,7 +49,7 @@
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ChooseClassCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"classCell" forIndexPath: indexPath];
     cell.backgroundColor = [self.classNumbers objectAtIndex: indexPath.row];
-    cell.classNumber.text = [NSString stringWithFormat: @"%ld", (indexPath.row + 1)];
+    cell.classNumber.text = [NSString stringWithFormat: @"%d", (indexPath.row + 1)];
     return cell;
 }
 
@@ -76,15 +73,17 @@
     return UIEdgeInsetsMake(0.f, 0.f, 0.f, 0.f);
 }
 
-#pragma mark - Segue
+#pragma mark - Select Item in Collection View
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == 3) {
+    [self performSegueWithIdentifier: @"ChooseFileIdentifier" sender: indexPath];
+    
+    /*if (indexPath.row == 3) {
         [self performSegueWithIdentifier: @"OpenQuizesIdentifier" sender: indexPath];
     } else {
         [self performSegueWithIdentifier: @"ChooseFileIdentifier" sender: indexPath];
-    }
+    }*/
 }
 
 @end

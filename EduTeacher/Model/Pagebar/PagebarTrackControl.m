@@ -1,14 +1,14 @@
 //
-//  TrackControl.m
+//  PagebarTrackControl.m
 //  EduTeacher
 //
 //  Created by Andrew Kochulab on 21.01.16.
 //  Copyright © 2016 Andrew Kochulab & Bohdan Savych. All rights reserved.
 //
 
-#import "TrackControl.h"
+#import "PagebarTrackControl.h"
 
-@implementation TrackControl
+@implementation PagebarTrackControl
 
 #pragma mark - Initialization
 

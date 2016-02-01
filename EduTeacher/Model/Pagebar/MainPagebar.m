@@ -7,7 +7,7 @@
 //
 
 #import "MainPagebar.h"
-#import "TrackControl.h"
+#import "PagebarTrackControl.h"
 #import "PagebarThumb.h"
 #import "PagebarShadow.h"
 #import "PDFDocument.h"
@@ -17,7 +17,7 @@
 @interface MainPagebar ()
 
 @property (strong, nonatomic) PDFDocument* document;
-@property (strong, nonatomic) TrackControl* trackControl;
+@property (strong, nonatomic) PagebarTrackControl* trackControl;
 @property (strong, nonatomic) PagebarThumb* pageThumbView;
 
 @property (strong, nonatomic) NSMutableDictionary* thumbViews;
@@ -170,7 +170,7 @@
         // Add page numbers to super UIView
         [self addSubview: pageNumberView];
         
-        _trackControl = [[TrackControl alloc] initWithFrame: self.bounds];
+        _trackControl = [[PagebarTrackControl alloc] initWithFrame: self.bounds];
         
         [_trackControl addTarget: self
                           action: @selector(trackViewTouchDown:)
@@ -545,7 +545,7 @@
                                                   repeats: NO];
 }
 
-- (NSInteger) trackViewPageNumber:(TrackControl *)trackView {
+- (NSInteger) trackViewPageNumber:(PagebarTrackControl *)trackView {
     
     CGFloat controlWidth = CGRectGetWidth(trackView.bounds);
     
@@ -558,9 +558,7 @@
 }
 
 
-- (void) trackViewTouchDown:(TrackControl *)trackView {
-    
-    //NSLog(@"MainPagebar.trackViewTouchDown");
+- (void) trackViewTouchDown:(PagebarTrackControl *)trackView {
     
     NSInteger page = [self trackViewPageNumber: trackView];
     
@@ -579,9 +577,7 @@
     trackView.tag = page;
 }
 
-- (void) trackViewValueChanged:(TrackControl *)trackView {
-    
-   // NSLog(@"MainPagebar.trackViewValueChanged");
+- (void) trackViewValueChanged:(PagebarTrackControl *)trackView {
     
     NSInteger page = [self trackViewPageNumber: trackView];
     
@@ -600,9 +596,7 @@
     }
 }
 
-- (void) trackViewTouchUp:(TrackControl *)trackView {
-    
-    //NSLog(@"MainPagebar.trackViewTouchUp");
+- (void) trackViewTouchUp:(PagebarTrackControl *)trackView {
     
     // Cleanup timer
     [trackTimer invalidate];

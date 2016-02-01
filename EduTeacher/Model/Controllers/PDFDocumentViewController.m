@@ -17,6 +17,7 @@
 #import "MainPagebar.h"
 #import "ToolPropertiesController.h"
 #import "UIImage+Overlay.h"
+#import "PDFDataManager.h"
 
 @interface PDFDocumentViewController () <
     UIScrollViewDelegate,
@@ -28,13 +29,10 @@
     ToolPropertiesDelegate              // change color, line width and opacity
 >
 
-
 @property (strong, nonatomic) PDFDocument* document;
 @property (strong, nonatomic) UIScrollView* scrollView;
 @property (strong, nonatomic) DrawingToolbar* drawingToolbar;
 @property (strong, nonatomic) MainPagebar* mainPagebar;
-
-@property (assign, nonatomic) CGFloat scrollViewOutset;
 
 @property (strong, nonatomic) NSMutableDictionary* contentViews;
 
@@ -57,6 +55,7 @@
     CGFloat drawbarHeight;
     CGFloat tapAreaSize;
     
+    CGFloat scrollViewOutset;
     BOOL ignoreDidScroll;
 }
 
@@ -80,7 +79,7 @@
                                    name: UIApplicationWillResignActiveNotification
                                  object: nil];
         
-        self.scrollViewOutset = 8.f;
+        scrollViewOutset = 8.f;
         
         // retain the supplied document object
         [document updateDocumentProperties];
@@ -93,8 +92,8 @@
     return self;
 }
 
-- (void) dealloc
-{
+- (void) dealloc {
+
     [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
@@ -123,12 +122,7 @@
     self.mainPagebar.delegate = self;
     [self.view addSubview: self.mainPagebar];
     
-    
-    
-    // todo
-    
-    
-    
+    // Setup tap gesture recognizers
     UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget: self
                                                                                 action: @selector(handleSingleTap:)];
     singleTap.numberOfTouchesRequired = 1;
@@ -147,13 +141,13 @@
     doubleTapTwo.numberOfTapsRequired = 2;
     doubleTapTwo.delegate = self;
     
+    [singleTap requireGestureRecognizerToFail: doubleTapOne];
+    
     [self.view addGestureRecognizer: singleTap];
     [self.view addGestureRecognizer: doubleTapOne];
     [self.view addGestureRecognizer: doubleTapTwo];
-    
-    [singleTap requireGestureRecognizerToFail: doubleTapOne];
-    
-    
+
+    // Setup default values for drawing tool properties
     self.lineColor = [UIColor colorWithRed: .173f green: .243f blue: .314f alpha: 1.f];
     self.lineWidth = [NSNumber numberWithFloat: 8.f];
     self.lineAlpha = [NSNumber numberWithFloat: 0.8f];
@@ -165,8 +159,6 @@
     
     minPage = 1;
     maxPage = [self.document.pageCount integerValue];
-    
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -254,7 +246,7 @@
     
     // Make rect by super view bounds
     CGRect viewRect = self.view.bounds;
-    CGRect scrollViewRect = CGRectInset(viewRect, - self.scrollViewOutset, 0.f);
+    CGRect scrollViewRect = CGRectInset(viewRect, - scrollViewOutset, 0.f);
     
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame: scrollViewRect];
     scrollView.autoresizesSubviews = NO;
@@ -312,7 +304,6 @@
     return mainPagebar;
 }
 
-
 #pragma mark - PDFDocumentViewController methods
 
 - (void) updateContentSize:(UIScrollView *)scrollView {
@@ -338,7 +329,7 @@
             viewRect.size = scrollView.bounds.size;
             viewRect.origin.x = CGRectGetWidth(viewRect) * (page - 1);
          
-            contentView.frame = CGRectInset(viewRect, self.scrollViewOutset, 0.f);
+            contentView.frame = CGRectInset(viewRect, scrollViewOutset, 0.f);
         }
      ];
     
@@ -363,7 +354,7 @@
     // Setup content view
     viewRect.size = scrollView.bounds.size;
     viewRect.origin.x = CGRectGetWidth(viewRect) * (page - 1);
-    viewRect = CGRectInset(viewRect, self.scrollViewOutset, 0.f);
+    viewRect = CGRectInset(viewRect, scrollViewOutset, 0.f);
     
     // Setup document properties
     NSURL* fileURL = self.document.fileURL;
@@ -383,6 +374,13 @@
     
     // Request page preview thumb
     [contentView showPageThumb: fileURL page: page password: password guid: guid];
+    
+    // Get image from Data manager
+    //UIImage* image = [[PDFDataManager sharedInstance] getAnnotationImage: [self.document filePath]
+    //                                                            withPage: [NSNumber numberWithInteger: page]];
+    
+    // Setup image for content view
+    //[contentView setContentDrawingImageView: image];
 }
 
 - (void) layoutContentViews:(UIScrollView *)scrollView {
@@ -460,7 +458,6 @@
     }
 }
 
-
 - (void) handleScrollViewDidEnd:(UIScrollView *)scrollView {
     
     // Get scrollView width
@@ -489,7 +486,6 @@
         [self.mainPagebar updatePagebar];
     }
 }
-
 
 - (void) showDocumentPage: (NSInteger)pageNumber {
     
@@ -548,17 +544,7 @@
     
     [[ThumbQueue sharedInstance] cancelOperationsWithGUID: self.document.guid];
     [[ThumbCache sharedInstance] removeAllObjects];
-    
-    if ([self.delegate respondsToSelector: @selector(dismissPDFDocumentViewController:)] == YES) {
-        
-        [self.delegate dismissPDFDocumentViewController: self];
-
-    } else {
-        
-        NSLog(@"Delegate must respond to -dismissDocumentViewController");
-    }
 }
-
 
 #pragma mark - UIScrollViewDelegate methods
 
@@ -578,7 +564,6 @@
     
     [self handleScrollViewDidEnd: scrollView];
 }
-
 
 #pragma mark - UIGestureRecognizerDelegate methods
 
@@ -779,7 +764,6 @@
     }
 }
 
-
 #pragma mark - ContentViewDelegate methods
 
 - (void) contentView:(ContentView *)contentView touchesBegan:(NSSet *)touches {
@@ -801,8 +785,6 @@
         
         [self.mainPagebar hidePagebar];
         [self.drawingToolbar hideToolbar];
-        //[self hideNavigationBar: self.navigationController.navigationBar];
-        
         [[self navigationController] setNavigationBarHidden: YES animated: YES];
         
         lastHideTime = [NSDate date];
@@ -815,7 +797,6 @@
     
     [self showDocumentPage: page];
 }
-
 
 #pragma mark - UIApplication notification methods 
 
@@ -882,7 +863,6 @@
     
     [self updateColorButtonImage];
 }
-
 
 - (void) tappedInToolbar:(DrawingToolbar *)toolbar drawButton:(UIButton *)button {
  
@@ -1085,7 +1065,6 @@
     }
 }
 
-
 - (void) saveAnnotation {
     
     // Clear all button selection
@@ -1118,7 +1097,7 @@
                         [contentPage showDrawingView: self.drawingView.image];
                         [contentPage addSubview: self.drawingView];
                         
-                        NSMutableArray* annotationsDict = [NSMutableArray new];
+                        NSMutableDictionary* annotationsDict = [NSMutableDictionary new];
                         NSData* currentImage = UIImagePNGRepresentation(self.drawingView.image);
                         
                         [annotationsDict setValue: currentImage forKey: @"image"];
@@ -1129,6 +1108,7 @@
                         [annotationsDict setValue: self.document.fileSize forKey: @"fileSize"];
                         [annotationsDict setValue: self.document.pageCount forKey: @"pageCount"];
                         
+                        //[[PDFDataManager sharedInstance] addAnnotation: annotationsDict];
                         annotationsDict = nil;
                     }
                     
@@ -1157,7 +1137,6 @@
         self.drawingView.lineAlpha = [self.lineAlpha floatValue];
     }
 }
-
 
 #pragma mark - DrawingViewDelegate methods
 
