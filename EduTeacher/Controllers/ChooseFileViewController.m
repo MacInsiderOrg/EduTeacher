@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *documentsTableView;
 @property(strong,nonatomic)NSArray* namesArray;
 @property(assign,nonatomic)NSInteger categoryIdent;
+@property(strong,nonatomic)NSOperation* currentOperation;
 @end
 
 
@@ -76,12 +77,12 @@
     
     return documentsNames;
 }
--(void)arrayWithFilter:(NSString*)filter
+-(NSArray*)arrayWithFilter:(NSString*)filter
 {
-   
+    NSMutableArray *newArr;
     if(filter!=nil&& filter.length!=0)
     {
-         NSMutableArray *newArr=[[NSMutableArray alloc]initWithArray:self.documentsNames];
+          newArr=[[NSMutableArray alloc]initWithArray:self.documentsNames];
         for(NSString* name in self.documentsNames)
         {
             if([name rangeOfString:filter ].location==NSNotFound)
@@ -89,13 +90,29 @@
                 [newArr removeObject:name];
             }
         }
-        self.documentsNames=newArr;
+        return newArr;
         
     }
     if(filter.length==0)
     {
-        self.documentsNames=[self getDocumentsNames];
+        return [self getDocumentsNames];
     }
+    return nil;
+}
+-(void)generateInBackground:(NSString*)filter
+{
+    [self.currentOperation cancel];
+    __weak ChooseFileViewController *weakSelf=self;
+    self.currentOperation=[NSBlockOperation blockOperationWithBlock:^{
+        NSArray* newArray=[weakSelf arrayWithFilter:filter];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.documentsNames=newArray;
+            [weakSelf.documentsTableView reloadData];
+            weakSelf.currentOperation=nil;
+        });
+    }];
+    [self.currentOperation start];
 }
 -(void)prepareView
 {
@@ -246,7 +263,8 @@
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     NSLog(@"text change%@",searchText);
-    [self arrayWithFilter:searchText];
+   // self.documentsNames=[self arrayWithFilter:searchText];
+    [self generateInBackground:searchText];
     [self.documentsTableView reloadData];
 }
 @end
