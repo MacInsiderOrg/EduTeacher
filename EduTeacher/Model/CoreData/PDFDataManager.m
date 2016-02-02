@@ -78,7 +78,7 @@ static PDFDataManager* instance = nil;
     
     if (persistentStoreCoordinator != nil) {
         
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
     }
     

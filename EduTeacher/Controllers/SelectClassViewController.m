@@ -49,7 +49,7 @@
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ChooseClassCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"classCell" forIndexPath: indexPath];
     cell.backgroundColor = [self.classNumbers objectAtIndex: indexPath.row];
-    cell.classNumber.text = [NSString stringWithFormat: @"%ld", (indexPath.row + 1)];
+    cell.classNumber.text = [NSString stringWithFormat: @"%d", (indexPath.row + 1)];
     return cell;
 }
 

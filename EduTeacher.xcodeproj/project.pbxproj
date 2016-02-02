@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E81125B1C5F970800B5AC2B /* CategoryUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81125A1C5F970800B5AC2B /* CategoryUICollectionViewCell.m */; };
-		5E81125F1C5FAA6700B5AC2B /* pdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E81125C1C5FAA6700B5AC2B /* pdf.png */; };
-		5E8112601C5FAA6700B5AC2B /* ppt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E81125D1C5FAA6700B5AC2B /* ppt.png */; };
-		5E8112611C5FAA6700B5AC2B /* pptx.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E81125E1C5FAA6700B5AC2B /* pptx.png */; };
 		5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */; };
 		5EE68DBB1C5D1843004B9339 /* SubjectCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBA1C5D1843004B9339 /* SubjectCollectionViewController.m */; };
 		5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBD1C5D19B6004B9339 /* SubjectUICollectionViewCell.m */; };
@@ -66,9 +63,6 @@
 /* Begin PBXFileReference section */
 		5E8112591C5F970800B5AC2B /* CategoryUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryUICollectionViewCell.h; path = Views/CategoryUICollectionViewCell.h; sourceTree = "<group>"; };
 		5E81125A1C5F970800B5AC2B /* CategoryUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryUICollectionViewCell.m; path = Views/CategoryUICollectionViewCell.m; sourceTree = "<group>"; };
-		5E81125C1C5FAA6700B5AC2B /* pdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf.png; sourceTree = "<group>"; };
-		5E81125D1C5FAA6700B5AC2B /* ppt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppt.png; sourceTree = "<group>"; };
-		5E81125E1C5FAA6700B5AC2B /* pptx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pptx.png; sourceTree = "<group>"; };
 		5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateClassUIViewController.h; path = Controllers/CreateClassUIViewController.h; sourceTree = "<group>"; };
 		5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateClassUIViewController.m; path = Controllers/CreateClassUIViewController.m; sourceTree = "<group>"; };
 		5EE68DB91C5D1843004B9339 /* SubjectCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectCollectionViewController.h; path = Controllers/SubjectCollectionViewController.h; sourceTree = "<group>"; };
@@ -260,9 +254,6 @@
 		C84F11501C5BA455001A3B5D /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				5E81125C1C5FAA6700B5AC2B /* pdf.png */,
-				5E81125D1C5FAA6700B5AC2B /* ppt.png */,
-				5E81125E1C5FAA6700B5AC2B /* pptx.png */,
 				C84F11441C5BA191001A3B5D /* Assets.xcassets */,
 				C84F11411C5BA191001A3B5D /* Main.storyboard */,
 				6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */,
@@ -469,13 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C88E51291C5E3F49008940F7 /* Programming in Objective-C.pdf in Resources */,
-				5E81125F1C5FAA6700B5AC2B /* pdf.png in Resources */,
-				5E8112611C5FAA6700B5AC2B /* pptx.png in Resources */,
 				C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */,
 				C88E512A1C5E3F49008940F7 /* SwiftLanguage.pdf in Resources */,
 				C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */,
 				6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */,
-				5E8112601C5FAA6700B5AC2B /* ppt.png in Resources */,
 				C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

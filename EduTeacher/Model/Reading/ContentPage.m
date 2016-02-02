@@ -519,7 +519,7 @@
                         // Create target with UTF8 coding
                         NSString* target = [NSString stringWithCString:uri encoding:NSUTF8StringEncoding];
                         
-                        linkTarget = [NSURL URLWithString:[target stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                        linkTarget = [NSURL URLWithString: [target stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLFragmentAllowedCharacterSet]]];
                     }
                 }
             }

@@ -20,7 +20,6 @@
         
         _lineColor = lineColor;
         _lineWidth = lineWidth;
-        //_lineAlpha = 1.f - [lineAlpha floatValue];
         _lineAlpha = 1.f - lineAlpha;
     }
     
