@@ -30,6 +30,8 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    self.preferredContentSize = CGSizeMake(340, 170);
+    
     // Setup labels
     [self.view addSubview: [self setupLabelWithFrame: CGRectMake(15, 25, 120, 20) andText: @"Color:"]];
     [self.view addSubview: [self setupLabelWithFrame: CGRectMake(15, 75, 120, 20) andText: @"Thickness:"]];

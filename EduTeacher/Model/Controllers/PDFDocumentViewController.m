@@ -36,8 +36,6 @@
 
 @property (strong, nonatomic) NSMutableDictionary* contentViews;
 
-@property (strong, nonatomic) UIPopoverController* popoverController;
-
 @end
 
 
@@ -1154,15 +1152,12 @@
 - (void) openToolProperties:(UIButton *)button {
     
     ToolPropertiesController* toolPropertiesController = [[ToolPropertiesController alloc] initWithLineColor: self.lineColor lineWidth: [self.lineWidth floatValue] lineAlpha: [self.lineAlpha floatValue]];
+
     toolPropertiesController.delegate = self;
-    
-    self.popoverController = [[UIPopoverController alloc] initWithContentViewController: toolPropertiesController];
-    [self.popoverController setPopoverContentSize: CGSizeMake(340, 170) animated: YES];
-    
-    [self.popoverController presentPopoverFromRect: button.bounds
-                                            inView: button
-                          permittedArrowDirections: UIPopoverArrowDirectionLeft
-                                          animated: YES];
+    toolPropertiesController.modalPresentationStyle = UIModalPresentationPopover;
+    toolPropertiesController.popoverPresentationController.sourceView = button;
+    toolPropertiesController.popoverPresentationController.sourceRect = button.bounds;
+    [self presentViewController: toolPropertiesController animated: YES completion: nil];
     
     [self updateColorButtonImage];
 }
