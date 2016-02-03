@@ -217,12 +217,14 @@
                                                              handler: ^(UIAlertAction* action) {
                                                                  [self saveDocument];
                                                                  [alert dismissViewControllerAnimated: YES completion: nil];
+                                                                 [self.navigationController popViewControllerAnimated:NO];
                                                              }];
             
             UIAlertAction* cancelButton = [UIAlertAction actionWithTitle: @"Cancel"
                                                                    style: UIAlertActionStyleCancel
                                                                  handler: ^(UIAlertAction* action) {
                                                                      [alert dismissViewControllerAnimated: YES completion: nil];
+                                                                     [self.navigationController popViewControllerAnimated:NO];
                                                                  }];
             
             [alert addAction: okButton];
@@ -230,8 +232,6 @@
             
             [self presentViewController: alert animated: YES completion: nil];
         }
-        
-        [self.navigationController popViewControllerAnimated: NO];
     }
 }
 
