@@ -17,7 +17,6 @@
 #import "MainPagebar.h"
 #import "ToolPropertiesController.h"
 #import "UIImage+Overlay.h"
-#import "PDFDataManager.h"
 
 @interface PDFDocumentViewController () <
     UIScrollViewDelegate,
@@ -35,6 +34,7 @@
 @property (strong, nonatomic) MainPagebar* mainPagebar;
 
 @property (strong, nonatomic) NSMutableDictionary* contentViews;
+@property (strong, nonatomic) NSCache* imagesCache;
 
 @end
 
@@ -85,6 +85,9 @@
         
         // Touch thumb cache directory
         [ThumbCache touchThumbCacheWithGUID: document.guid];
+        
+        // Initialize image cache
+        //self.imagesCache = [[NSCache alloc] init];
     }
     
     return self;
@@ -157,6 +160,11 @@
     
     minPage = 1;
     maxPage = [self.document.pageCount integerValue];
+    
+    // Setup save document button
+    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemSave
+                                                                                              target: self
+                                                                                              action: @selector(saveDocument)]];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -187,9 +195,44 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear: animated];
-    
+
     lastAppearSize = self.view.bounds.size;
+    [self presentCheckSaveDocumentAlert];
+    [super viewWillDisappear: animated];
+}
+
+- (void) presentCheckSaveDocumentAlert {
+    
+    if ([self.navigationController.viewControllers indexOfObject: self] == NSNotFound) {
+        
+        if (self.imagesCache != nil) {
+            
+            // Check if user want to save document
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle: @"Question"
+                                                                           message: @"Do you want to save changes into your document?"
+                                                                    preferredStyle: UIAlertControllerStyleAlert];
+            
+            UIAlertAction* okButton = [UIAlertAction actionWithTitle: @"Ok"
+                                                               style: UIAlertActionStyleDefault
+                                                             handler: ^(UIAlertAction* action) {
+                                                                 [self saveDocument];
+                                                                 [alert dismissViewControllerAnimated: YES completion: nil];
+                                                             }];
+            
+            UIAlertAction* cancelButton = [UIAlertAction actionWithTitle: @"Cancel"
+                                                                   style: UIAlertActionStyleCancel
+                                                                 handler: ^(UIAlertAction* action) {
+                                                                     [alert dismissViewControllerAnimated: YES completion: nil];
+                                                                 }];
+            
+            [alert addAction: okButton];
+            [alert addAction: cancelButton];
+            
+            [self presentViewController: alert animated: YES completion: nil];
+        }
+        
+        [self.navigationController popViewControllerAnimated: NO];
+    }
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
@@ -203,7 +246,6 @@
 - (UIStatusBarStyle) preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
-
 
 - (BOOL)shouldAutorotate {
     return YES;
@@ -373,12 +415,15 @@
     // Request page preview thumb
     [contentView showPageThumb: fileURL page: page password: password guid: guid];
     
-    // Get image from Data manager
-    UIImage* image = [[PDFDataManager sharedInstance] getAnnotationImage: [self.document filePath]
-                                                                withPage: [NSNumber numberWithInteger: page]];
-    
-    // Setup image for content view
-    [contentView setContentDrawingImageView: image];
+    if (self.imagesCache != nil) {
+        // Get annotation by page
+        NSNumber* pageNumber = [NSNumber numberWithInteger: page];
+        
+        if ([self.imagesCache objectForKey: pageNumber]) {
+            UIImage* image = [UIImage imageWithData: [self.imagesCache objectForKey: pageNumber]];
+            [contentView setContentDrawingImageView: image];
+        }
+    }
 }
 
 - (void) layoutContentViews:(UIScrollView *)scrollView {
@@ -1095,19 +1140,10 @@
                         [contentPage showDrawingView: self.drawingView.image];
                         [contentPage addSubview: self.drawingView];
                         
-                        NSMutableDictionary* annotationsDict = [NSMutableDictionary new];
                         NSData* currentImage = UIImagePNGRepresentation(self.drawingView.image);
                         
-                        [annotationsDict setValue: currentImage forKey: @"image"];
-                        [annotationsDict setValue: [NSNumber numberWithInteger: currentPage] forKey: @"page"];
-                        
-                        [annotationsDict setValue: self.document.filePath forKey: @"filePath"];
-                        [annotationsDict setValue: self.document.fileDate forKey: @"fileDate"];
-                        [annotationsDict setValue: self.document.fileSize forKey: @"fileSize"];
-                        [annotationsDict setValue: self.document.pageCount forKey: @"pageCount"];
-                        
-                        [[PDFDataManager sharedInstance] addAnnotation: annotationsDict];
-                        annotationsDict = nil;
+                        // Add annotation to cache
+                        [self updateCacheWithImage: currentImage byPage: [NSNumber numberWithInteger: currentPage]];
                     }
                     
                     [contentPage showDrawingView: self.drawingView.image];
@@ -1123,6 +1159,87 @@
     }
     
     [self.scrollView setScrollEnabled: YES];
+}
+
+- (void) updateCacheWithImage:(NSData *)image byPage:(NSNumber *)pageNumber {
+
+    if (self.imagesCache == nil) {
+        self.imagesCache = [[NSCache alloc] init];
+    }
+
+    // Replace image, if it exists in cache
+    if ([self.imagesCache objectForKey: pageNumber]) {
+        [self.imagesCache removeObjectForKey: pageNumber];
+    }
+    
+    // Add image to cache
+    [self.imagesCache setObject: image forKey: pageNumber];
+}
+
+- (void) saveDocument {
+    
+    if (self.imagesCache == nil) {
+        return;
+    }
+    
+    BOOL __block documentSaved = NO;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+       
+        NSURL* fileURL = [self.document fileURL];
+        
+        // Initialize local document
+        CGPDFDocumentRef documentReference = CGPDFDocumentCreateWithURL((__bridge_retained CFURLRef) fileURL);
+        
+        NSMutableData* documentData = [NSMutableData data];
+        UIGraphicsBeginPDFContextToData(documentData, self.drawingView.bounds, nil);
+        
+        // Iterate through pages
+        for (int page = 1; page <= [self.document.pageCount intValue]; page++) {
+            
+            // Get current page
+            CGPDFPageRef pageReference = CGPDFDocumentGetPage(documentReference, page);
+            
+            // Setup page frame
+            CGRect pageFrame = CGPDFPageGetBoxRect(pageReference, kCGPDFMediaBox);
+            
+            UIGraphicsBeginPDFPageWithInfo(pageFrame, nil);
+            
+            // Draw current page
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGContextSaveGState(context);
+            CGContextScaleCTM(context, 1.f, -1.f);
+            CGContextTranslateCTM(context, 0.f, - CGRectGetHeight(pageFrame));
+            CGContextDrawPDFPage(context, pageReference);
+            CGContextRestoreGState(context);
+            
+            UIImage* image = [UIImage imageWithData: [self.imagesCache objectForKey: [NSNumber numberWithInt: page]]];
+            
+            if (image != nil) {
+                [image drawInRect: pageFrame];
+            }
+        }
+        
+        UIGraphicsEndPDFContext();
+        
+        // Release current document reference
+        CGPDFDocumentRelease(documentReference);
+        
+        // Save changes to document
+        if ([[NSFileManager defaultManager] createFileAtPath: [self.document filePath] contents: documentData attributes: nil]) {
+            documentSaved = YES;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            // Display information in UI (todo)
+            if (documentSaved == YES) {
+                NSLog(@"File saved");
+                [self.imagesCache removeAllObjects];
+                self.imagesCache = nil;
+            }
+        });
+    });
 }
 
 - (void) updateDrawingView {

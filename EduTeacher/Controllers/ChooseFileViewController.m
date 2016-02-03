@@ -242,6 +242,7 @@
     if (self.documentsNames != nil)
     {
         NSString* filePath = [[NSHomeDirectory() stringByAppendingPathComponent: @"Documents"] stringByAppendingPathComponent: [self.documentsNames objectAtIndex:indexPath.row]];
+        NSLog(@"%@", filePath);
         
         [self openDocument: filePath];
     }
