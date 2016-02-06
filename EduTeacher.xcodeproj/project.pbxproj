@@ -54,6 +54,7 @@
 		C88E51261C5E3D27008940F7 /* ChooseFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */; };
 		C88E51291C5E3F49008940F7 /* Programming in Objective-C.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C88E51271C5E3F49008940F7 /* Programming in Objective-C.pdf */; };
 		C88E512A1C5E3F49008940F7 /* SwiftLanguage.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C88E51281C5E3F49008940F7 /* SwiftLanguage.pdf */; };
+		C8DFEA5C1C66981F001E5705 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFEA5B1C66981F001E5705 /* UIViewController+BackButtonHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,8 @@
 		C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseFileViewController.m; path = Controllers/ChooseFileViewController.m; sourceTree = "<group>"; };
 		C88E51271C5E3F49008940F7 /* Programming in Objective-C.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Programming in Objective-C.pdf"; path = "Documents/Programming in Objective-C.pdf"; sourceTree = "<group>"; };
 		C88E51281C5E3F49008940F7 /* SwiftLanguage.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = SwiftLanguage.pdf; path = Documents/SwiftLanguage.pdf; sourceTree = "<group>"; };
+		C8DFEA5A1C66981F001E5705 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BackButtonHandler.h"; path = "Controllers/UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		C8DFEA5B1C66981F001E5705 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BackButtonHandler.m"; path = "Controllers/UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +269,8 @@
 				5EE68DDD1C5D2C65004B9339 /* QuizViewController.m */,
 				C88E51241C5E3D27008940F7 /* ChooseFileViewController.h */,
 				C88E51251C5E3D27008940F7 /* ChooseFileViewController.m */,
+				C8DFEA5A1C66981F001E5705 /* UIViewController+BackButtonHandler.h */,
+				C8DFEA5B1C66981F001E5705 /* UIViewController+BackButtonHandler.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				C88E510D1C5E39AB008940F7 /* ThumbRequest.m in Sources */,
 				C88E50DB1C5E38F6008940F7 /* DrawingView.m in Sources */,
 				5EE68DBE1C5D19B6004B9339 /* SubjectUICollectionViewCell.m in Sources */,
+				C8DFEA5C1C66981F001E5705 /* UIViewController+BackButtonHandler.m in Sources */,
 				C88E50E51C5E3951008940F7 /* PagebarShadow.m in Sources */,
 				C88E50F41C5E3979008940F7 /* ContentPage.m in Sources */,
 				C88E50D51C5E38DE008940F7 /* DrawingTextTool.m in Sources */,

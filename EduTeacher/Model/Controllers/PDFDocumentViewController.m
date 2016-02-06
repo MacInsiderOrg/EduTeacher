@@ -85,9 +85,6 @@
         
         // Touch thumb cache directory
         [ThumbCache touchThumbCacheWithGUID: document.guid];
-        
-        // Initialize image cache
-        //self.imagesCache = [[NSCache alloc] init];
     }
     
     return self;
@@ -160,11 +157,6 @@
     
     minPage = 1;
     maxPage = [self.document.pageCount integerValue];
-    
-    // Setup save document button
-    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemSave
-                                                                                              target: self
-                                                                                              action: @selector(saveDocument)]];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -181,6 +173,11 @@
     }
     
     self.title = self.document.fileName;
+    
+    // Setup save document button
+    [self.navigationItem setRightBarButtonItem: [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemSave
+                                                                                              target: self
+                                                                                              action: @selector(saveDocument)]];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -195,44 +192,8 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-
-    lastAppearSize = self.view.bounds.size;
-    [self presentCheckSaveDocumentAlert];
     [super viewWillDisappear: animated];
-}
-
-- (void) presentCheckSaveDocumentAlert {
-    
-    if ([self.navigationController.viewControllers indexOfObject: self] == NSNotFound) {
-        
-        if (self.imagesCache != nil) {
-            
-            // Check if user want to save document
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle: @"Question"
-                                                                           message: @"Do you want to save changes into your document?"
-                                                                    preferredStyle: UIAlertControllerStyleAlert];
-            
-            UIAlertAction* okButton = [UIAlertAction actionWithTitle: @"Ok"
-                                                               style: UIAlertActionStyleDefault
-                                                             handler: ^(UIAlertAction* action) {
-                                                                 [self saveDocument];
-                                                                 [alert dismissViewControllerAnimated: YES completion: nil];
-                                                                 [self.navigationController popViewControllerAnimated:NO];
-                                                             }];
-            
-            UIAlertAction* cancelButton = [UIAlertAction actionWithTitle: @"Cancel"
-                                                                   style: UIAlertActionStyleCancel
-                                                                 handler: ^(UIAlertAction* action) {
-                                                                     [alert dismissViewControllerAnimated: YES completion: nil];
-                                                                     [self.navigationController popViewControllerAnimated:NO];
-                                                                 }];
-            
-            [alert addAction: okButton];
-            [alert addAction: cancelButton];
-            
-            [self presentViewController: alert animated: YES completion: nil];
-        }
-    }
+    lastAppearSize = self.view.bounds.size;
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
@@ -1258,6 +1219,7 @@
 - (void) drawingView:(DrawingView *)drawingView didEndDrawUsingTool:(id<DrawingTool>)drawingTool {
     
     [self updateButtonStatus];
+    // [self saveAnnotation];
 }
 
 - (void) updateButtonStatus {
@@ -1307,6 +1269,43 @@
     self.lineAlpha = [NSNumber numberWithFloat: opacity];
 
     [self updateDrawingView];
+}
+
+#pragma mark - BackButtonHandler methods
+
+- (BOOL) navigationShouldPopOnBackButton {
+    
+    if (self.imagesCache != nil) {
+        
+        // Check if user want to save document
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Question"
+                                                                       message:@"Do you want to save changes into your document?"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction* action) {
+                                                             [self saveDocument];
+                                                             [alert dismissViewControllerAnimated:YES completion:nil];
+                                                             [self.navigationController popViewControllerAnimated:YES];
+                                                         }];
+        
+        UIAlertAction* cancelButton = [UIAlertAction actionWithTitle:@"Cancel"
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:^(UIAlertAction* action) {
+                                                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                                                 [self.navigationController popViewControllerAnimated:YES];
+                                                             }];
+        
+        [alert addAction: okButton];
+        [alert addAction: cancelButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+    return NO;
 }
 
 @end
