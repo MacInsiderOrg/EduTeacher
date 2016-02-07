@@ -1274,6 +1274,7 @@
 #pragma mark - BackButtonHandler methods
 
 - (BOOL) navigationShouldPopOnBackButton {
+    [self saveAnnotation];
     
     if (self.imagesCache != nil) {
         
