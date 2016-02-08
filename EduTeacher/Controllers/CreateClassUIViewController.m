@@ -37,7 +37,7 @@ static NSCharacterSet* nonDigits;
 //call when we write some charackter in text field
 {
     NSCharacterSet *includeSet = [NSCharacterSet decimalDigitCharacterSet];
-    if ([[string stringByTrimmingCharactersInSet:includeSet] length] > 0||self.codeTextField.text.length>2)
+    if (![string isEqualToString:@""]&&([[string stringByTrimmingCharactersInSet:includeSet] length] > 0||self.codeTextField.text.length>2))
     {
         return NO;
     }
