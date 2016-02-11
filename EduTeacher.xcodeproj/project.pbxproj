@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CD6C0337BC385452D46C973 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F118259487513498623D0C /* libPods.a */; };
 		5E81125B1C5F970800B5AC2B /* CategoryUICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81125A1C5F970800B5AC2B /* CategoryUICollectionViewCell.m */; };
 		5EE68DB81C5CFACB004B9339 /* CreateClassUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DB71C5CFACB004B9339 /* CreateClassUIViewController.m */; };
 		5EE68DBB1C5D1843004B9339 /* SubjectCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE68DBA1C5D1843004B9339 /* SubjectCollectionViewController.m */; };
@@ -16,6 +17,11 @@
 		6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D828DB71C5C0254008E5DE9 /* StoryboardTestCreating.storyboard */; };
 		6D828DBE1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */; };
 		6D828DBF1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */; };
+		C82C76381C6CE36F00345C72 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C82C76371C6CE36F00345C72 /* Podfile */; };
+		C82C763C1C6CE4FE00345C72 /* libSignalR-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C82C763B1C6CE4FE00345C72 /* libSignalR-ObjC.a */; };
+		C82C76451C6CE90600345C72 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C82C76441C6CE90600345C72 /* libAFNetworking.a */; };
+		C82C76491C6CE9ED00345C72 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C76481C6CE9ED00345C72 /* Router.m */; };
+		C82C764C1C6CE9FB00345C72 /* ServiceHub.m in Sources */ = {isa = PBXBuildFile; fileRef = C82C764B1C6CE9FB00345C72 /* ServiceHub.m */; };
 		C84F113A1C5BA191001A3B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F11391C5BA191001A3B5D /* main.m */; };
 		C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C84F113C1C5BA191001A3B5D /* AppDelegate.m */; };
 		C84F11431C5BA191001A3B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84F11411C5BA191001A3B5D /* Main.storyboard */; };
@@ -56,6 +62,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA909B42E8565F6B4A48109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2CC4553836E1B3AE32C42738 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		34F118259487513498623D0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8112591C5F970800B5AC2B /* CategoryUICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryUICollectionViewCell.h; path = Views/CategoryUICollectionViewCell.h; sourceTree = "<group>"; };
 		5E81125A1C5F970800B5AC2B /* CategoryUICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryUICollectionViewCell.m; path = Views/CategoryUICollectionViewCell.m; sourceTree = "<group>"; };
 		5EE68DB61C5CFACB004B9339 /* CreateClassUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateClassUIViewController.h; path = Controllers/CreateClassUIViewController.h; sourceTree = "<group>"; };
@@ -73,6 +82,17 @@
 		6D828DBB1C5C0B8F008E5DE9 /* ChooseClassCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseClassCollectionViewCell.m; path = Views/ChooseClassCollectionViewCell.m; sourceTree = "<group>"; };
 		6D828DBC1C5C0B8F008E5DE9 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionViewCell.h; path = Views/HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		6D828DBD1C5C0B8F008E5DE9 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionViewCell.m; path = Views/HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		C82C76371C6CE36F00345C72 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C82C76391C6CE41C00345C72 /* libSignalR-ObjC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSignalR-ObjC.a"; path = "Pods/../build/Debug-iphoneos/libSignalR-ObjC.a"; sourceTree = "<group>"; };
+		C82C763B1C6CE4FE00345C72 /* libSignalR-ObjC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSignalR-ObjC.a"; path = "Pods/../build/Debug-iphoneos/libSignalR-ObjC.a"; sourceTree = "<group>"; };
+		C82C763D1C6CE55400345C72 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C82C763F1C6CE58500345C72 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C82C76411C6CE64C00345C72 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		C82C76441C6CE90600345C72 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		C82C76471C6CE9ED00345C72 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Router.h; path = Model/Service/Router.h; sourceTree = "<group>"; };
+		C82C76481C6CE9ED00345C72 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Router.m; path = Model/Service/Router.m; sourceTree = "<group>"; };
+		C82C764A1C6CE9FB00345C72 /* ServiceHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceHub.h; path = Model/Service/ServiceHub.h; sourceTree = "<group>"; };
+		C82C764B1C6CE9FB00345C72 /* ServiceHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceHub.m; path = Model/Service/ServiceHub.m; sourceTree = "<group>"; };
 		C84F11351C5BA191001A3B5D /* EduTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F11391C5BA191001A3B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C84F113B1C5BA191001A3B5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82C76451C6CE90600345C72 /* libAFNetworking.a in Frameworks */,
+				C82C763C1C6CE4FE00345C72 /* libSignalR-ObjC.a in Frameworks */,
+				4CD6C0337BC385452D46C973 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,11 +213,24 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		C82C76461C6CE9C100345C72 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C82C764A1C6CE9FB00345C72 /* ServiceHub.h */,
+				C82C764B1C6CE9FB00345C72 /* ServiceHub.m */,
+				C82C76471C6CE9ED00345C72 /* Router.h */,
+				C82C76481C6CE9ED00345C72 /* Router.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		C84F112C1C5BA191001A3B5D = {
 			isa = PBXGroup;
 			children = (
 				C84F11371C5BA191001A3B5D /* EduTeacher */,
 				C84F11361C5BA191001A3B5D /* Products */,
+				E6D5509D20EB4D826AC7689F /* Pods */,
+				CA99FC2447CB59C5258AB9E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +262,7 @@
 				C84F11461C5BA191001A3B5D /* LaunchScreen.storyboard */,
 				C84F11491C5BA191001A3B5D /* Info.plist */,
 				C84F11391C5BA191001A3B5D /* main.m */,
+				C82C76371C6CE36F00345C72 /* Podfile */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				6D38E36B1C5E4D2900EC313D /* PDFOperations */,
+				C82C76461C6CE9C100345C72 /* Service */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -367,6 +405,29 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		CA99FC2447CB59C5258AB9E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C82C76441C6CE90600345C72 /* libAFNetworking.a */,
+				C82C76411C6CE64C00345C72 /* libAFNetworking.a */,
+				C82C763F1C6CE58500345C72 /* MobileCoreServices.framework */,
+				C82C763D1C6CE55400345C72 /* SystemConfiguration.framework */,
+				C82C763B1C6CE4FE00345C72 /* libSignalR-ObjC.a */,
+				C82C76391C6CE41C00345C72 /* libSignalR-ObjC.a */,
+				34F118259487513498623D0C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6D5509D20EB4D826AC7689F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CC4553836E1B3AE32C42738 /* Pods.debug.xcconfig */,
+				0FA909B42E8565F6B4A48109 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,9 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C84F114C1C5BA191001A3B5D /* Build configuration list for PBXNativeTarget "EduTeacher" */;
 			buildPhases = (
+				C8FB30D2C1E9074B35FB1004 /* Check Pods Manifest.lock */,
 				C84F11311C5BA191001A3B5D /* Sources */,
 				C84F11321C5BA191001A3B5D /* Frameworks */,
 				C84F11331C5BA191001A3B5D /* Resources */,
+				DF0DF6D09085516F172F0D4F /* Embed Pods Frameworks */,
+				831ACFE6496DF15866A93B12 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82C76381C6CE36F00345C72 /* Podfile in Resources */,
 				C84F11481C5BA191001A3B5D /* LaunchScreen.storyboard in Resources */,
 				C84F11451C5BA191001A3B5D /* Assets.xcassets in Resources */,
 				6D828DB81C5C0254008E5DE9 /* StoryboardTestCreating.storyboard in Resources */,
@@ -433,6 +498,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		831ACFE6496DF15866A93B12 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8FB30D2C1E9074B35FB1004 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF0DF6D09085516F172F0D4F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C84F11311C5BA191001A3B5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -441,11 +554,13 @@
 				C88E50E41C5E3951008940F7 /* MainPagebar.m in Sources */,
 				C88E50F81C5E3979008940F7 /* PDFDocument.m in Sources */,
 				C88E50D41C5E38DE008940F7 /* DrawingRectangleTool.m in Sources */,
+				C82C764C1C6CE9FB00345C72 /* ServiceHub.m in Sources */,
 				C88E510C1C5E39AB008940F7 /* ThumbRender.m in Sources */,
 				C88E50F71C5E3979008940F7 /* ContentView.m in Sources */,
 				5E81125B1C5F970800B5AC2B /* CategoryUICollectionViewCell.m in Sources */,
 				6D7A97B81C5CE34800587927 /* HomeUICollectionViewController.m in Sources */,
 				C88E50E61C5E3951008940F7 /* PagebarThumb.m in Sources */,
+				C82C76491C6CE9ED00345C72 /* Router.m in Sources */,
 				C88E50F61C5E3979008940F7 /* ContentTile.m in Sources */,
 				C88E50F91C5E3979008940F7 /* PDFDocumentLink.m in Sources */,
 				C84F113D1C5BA191001A3B5D /* AppDelegate.m in Sources */,
@@ -589,11 +704,15 @@
 		};
 		C84F114D1C5BA191001A3B5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC4553836E1B3AE32C42738 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = EduTeacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -602,11 +721,15 @@
 		};
 		C84F114E1C5BA191001A3B5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA909B42E8565F6B4A48109 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = EduTeacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = macinsider.EduTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
