@@ -65,14 +65,21 @@
         self.hubProxy = [self.hubConnection createHubProxy:@"smartSchoolHub"];
         
         // Setup events (testing)
-        [self.hubProxy on:@"Exception" perform:self selector:@selector(onException:)];
+        [self setupEvents];
         
         // Start connection
         [self.hubConnection start];
         
     } else {
         NSLog(@"Server IP is not valid!");
+        self.isConnected = NO;
     }
+}
+
+#pragma mark - Events
+
+- (void) setupEvents {
+    [self.hubProxy on:@"Exception" perform:self selector:@selector(onException:)];
 }
 
 - (void) onException:(NSString *)message {
@@ -84,6 +91,13 @@
 - (void) SRConnectionDidOpen:(id<SRConnectionInterface>)connection {
     NSLog(@"SRConnectionDidOpen");
     NSLog(@"Connection started state: %d", self.hubConnection.state);
+    if (self.hubConnection.state == connected) {
+        self.isConnected = YES;
+        
+        if ([self.delegate respondsToSelector:@selector(connectedToServer)]) {
+            [self.delegate connectedToServer];
+        }
+    }
 }
 
 - (void) SRConnection:(id<SRConnectionInterface>)connection didReceiveData:(NSString *)data {
@@ -112,5 +126,7 @@
     NSLog(@"SRConnectionDidClose");
     NSLog(@"Connection closed state: %d", self.hubConnection.state);
 }
+
+
 
 @end

@@ -10,7 +10,15 @@
 #import "Router.h"
 #import "SignalR.h"
 
+@protocol ServiceHubDelegate <NSObject>
+
+- (void) connectedToServer;
+
+@end
+
 @interface ServiceHub : NSObject
+
+@property (weak, nonatomic) id <ServiceHubDelegate> delegate;
 
 @property (strong, nonatomic) Router *router;
 @property (strong, nonatomic) SRHubConnection *hubConnection;

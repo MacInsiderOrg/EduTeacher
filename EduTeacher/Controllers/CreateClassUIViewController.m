@@ -10,9 +10,10 @@
 #import "SubjectCollectionViewController.h"
 #import "ServiceHub.h"
 
-@interface CreateClassUIViewController()<UITextFieldDelegate>
+@interface CreateClassUIViewController()<UITextFieldDelegate, ServiceHubDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+@property (strong, nonatomic) ServiceHub *serviceHub;
 
 @end
 @implementation CreateClassUIViewController
@@ -20,7 +21,10 @@ static NSCharacterSet* nonDigits;
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.codeTextField.delegate=self;
+    self.codeTextField.delegate = self;
+    self.serviceHub = [ServiceHub sharedInstance];
+    self.serviceHub.delegate = self;
+    
 }
 #pragma mark-UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -56,45 +60,43 @@ static NSCharacterSet* nonDigits;
         int password = [self.codeTextField.text intValue];
         if (password >= 0 && password <= 255) {
             // Connect to the service
-            ServiceHub *hub = [ServiceHub sharedInstance];
-            [hub connectToServerWithCode: self.codeTextField.text];
+            [self.serviceHub connectToServerWithCode: self.codeTextField.text];
+
+            /*if (!hub.isConnected) {
+                [self presentAlertWithTitle:@"Error" message:@"Server is not available."];
+            }*/
             
-            // If IP is finded, transition to another VC
-            if (hub.isConnected) {
-                NSLog(@"client ip = %@", hub.router.clientIP);
-                NSLog(@"server ip = %@", hub.router.serverIP);
-                NSLog(@"server url = %@", hub.router.serverURL);
-                
-                SubjectCollectionViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubjectCollectionViewController"];
-                [self.navigationController pushViewController:viewController animated:YES];
-            } else {
-                NSLog(@"Server is not available.");
-            }
         } else {
-            NSLog(@"Display alert.. todo");
+            [self presentAlertWithTitle:@"Error" message:@"Code value should be between 0 and 255."];
         }
     }
+}
+
+- (void) connectedToServer {
+    SubjectCollectionViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubjectCollectionViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) presentAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:title
+                                                                    message:message
+                                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action) {
+                                                         [alert dismissViewControllerAnimated:YES completion:nil];
+                                                     }];
+    
+    [alert addAction:okButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark-private method
 -(BOOL)isEmpty
 {
     if (self.codeTextField.text.length == 0) {
-        
-        UIAlertController * alert = [UIAlertController alertControllerWithTitle: @"Password"
-                                                                        message: @"Please enter a password."
-                                                                 preferredStyle: UIAlertControllerStyleAlert];
-        
-        UIAlertAction* okButton = [UIAlertAction actionWithTitle: @"Ok"
-                                                           style: UIAlertActionStyleDefault
-                                                         handler: ^(UIAlertAction * action) {
-                                                             
-                                                             [alert dismissViewControllerAnimated:YES completion:nil];
-                                                         }];
-        
-        [alert addAction:okButton];
-        
-        [self presentViewController:alert animated:YES completion:nil];
+        [self presentAlertWithTitle:@"Error" message:@"Please enter the code"];
         return YES;
     }
     return NO;
