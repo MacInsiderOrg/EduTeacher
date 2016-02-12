@@ -61,14 +61,15 @@
                              IOS_CELLULAR @"/" IP_ADDR_IPv6];
     
     NSDictionary *addresses = [self getIPAddresses];
-    NSLog(@"addresses: %@", addresses);
-    
+
     __block NSString *address;
-    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop)
-     {
-         address = addresses[key];
-         if(address) *stop = YES;
-     } ];
+    [searchArray enumerateObjectsUsingBlock:
+        ^(NSString *key, NSUInteger idx, BOOL *stop) {
+            address = addresses[key];
+            if(address) *stop = YES;
+        }
+    ];
+
     return address ? address : @"0.0.0.0";
 }
 
@@ -115,7 +116,7 @@
     return [[@"http://" stringByAppendingString:self.serverIP] stringByAppendingString:@":8080/SignalR/"];
 }
 
-#pragma mark - Rotuer methods
+#pragma mark - Router methods
 
 + (BOOL) isValidIPAddress:(NSString *)ipAddress {
     const char *utf8 = [ipAddress UTF8String];

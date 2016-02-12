@@ -12,7 +12,9 @@
 
 @protocol ServiceHubDelegate <NSObject>
 
+@optional
 - (void) connectedToServer;
+- (void) serverNotFound;
 
 @end
 

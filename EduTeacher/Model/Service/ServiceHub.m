@@ -44,6 +44,7 @@
 #pragma mark - Instance methods
 
 - (void) dealloc {
+    NSLog(@"Service Hub Deallocated.");
     [self.hubConnection stop];
     self.hubProxy = nil;
     self.hubConnection.delegate = nil;
@@ -70,9 +71,20 @@
         // Start connection
         [self.hubConnection start];
         
-    } else {
-        NSLog(@"Server IP is not valid!");
-        self.isConnected = NO;
+        // Setup timer for checking connection
+        [NSTimer scheduledTimerWithTimeInterval:2.f
+                                         target:self
+                                       selector:@selector(checkConnection:)
+                                       userInfo:nil
+                                        repeats:NO];
+    }
+}
+
+- (void) checkConnection:(NSTimer *)timer {
+    if (!self.isConnected) {
+        if ([self.delegate respondsToSelector:@selector(serverNotFound)]) {
+            [self.delegate serverNotFound];
+        }
     }
 }
 
@@ -86,14 +98,46 @@
     NSLog(@"Get exception with message: %@", message);
 }
 
+- (void) setupTeacherMethods {
+    [self.hubProxy on:@"DoCommands" perform:self selector:@selector(onDoCommands:)];
+    [self.hubProxy on:@"ReciveFilesList" perform:self selector:@selector(onReceiveFilesList:)];
+    [self.hubProxy on:@"LoadPage" perform:self selector:@selector(onLoadPage:name:pageNumber:)];
+    [self.hubProxy on:@"FilePageCount" perform:self selector:@selector(onFilePageName:withCount:)];
+    [self.hubProxy on:@"ReciveStudentList" perform:self selector:@selector(onReceiveStudentList:)];
+    [self.hubProxy on:@"ReciveTestsAnswers" perform:self selector:@selector(onReceiveTestAnswers:)];
+}
+
+- (void) onDoCommands:(NSString *)command {
+    NSLog(@"onDoCommands: %@", command);
+}
+
+- (void) onReceiveFilesList:(NSArray *)files {
+    NSLog(@"onReceiveFilesList: %@", files);
+}
+
+- (void) onLoadPage:(NSString *)data name:(NSString *)name pageNumber:(NSString *)pageNumber {
+    NSLog(@"onLoadPage: %@, name = %@, pageNumber = %@", data, name, pageNumber);
+}
+
+- (void) onFilePageName:(NSString *)filename withCount:(NSString *)pageNumber {
+    NSLog(@"onFilePageName: %@, pageNumber = %@", filename, pageNumber);
+}
+
+- (void) onReceiveStudentList:(NSArray *)students {
+    NSLog(@"onReceiveStudentList: %@", students);
+}
+
+- (void) onReceiveTestAnswers:(NSArray *)answers {
+    NSLog(@"onReceiveTestAnswers: %@", answers);
+}
+
+
 #pragma mark - SRConnection delegate methods
 
 - (void) SRConnectionDidOpen:(id<SRConnectionInterface>)connection {
     NSLog(@"SRConnectionDidOpen");
     NSLog(@"Connection started state: %d", self.hubConnection.state);
     if (self.hubConnection.state == connected) {
-        self.isConnected = YES;
-        
         if ([self.delegate respondsToSelector:@selector(connectedToServer)]) {
             [self.delegate connectedToServer];
         }
@@ -112,12 +156,16 @@
 
 - (void) SRConnection:(id<SRConnectionInterface>)connection didChangeState:(connectionState)oldState newState:(connectionState)newState {
     NSLog(@"SRConnection:didChangeState from state: %d to state: %d", oldState, newState);
+
     if (newState == connected){
         [self.hubProxy invoke:@"TeacherConnectMe" withArgs:[NSArray arrayWithObject:@"Roman"] completionHandler:^(id response) {
             NSLog(@"Response: %@", response);
         }];
+        
+        [self setupTeacherMethods];
         self.isConnected = YES;
-    } else {
+    }
+    else {
         self.isConnected = NO;
     }
 }
@@ -126,7 +174,5 @@
     NSLog(@"SRConnectionDidClose");
     NSLog(@"Connection closed state: %d", self.hubConnection.state);
 }
-
-
 
 @end

@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EduTeacher/Model/Service/ServiceHub.m"
-            timestampString = "476910473.165225"
+            timestampString = "476996896.09296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-SRConnectionDidClose:"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-SRConnection:didChangeState:newState:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

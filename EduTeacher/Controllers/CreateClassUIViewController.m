@@ -61,11 +61,6 @@ static NSCharacterSet* nonDigits;
         if (password >= 0 && password <= 255) {
             // Connect to the service
             [self.serviceHub connectToServerWithCode: self.codeTextField.text];
-
-            /*if (!hub.isConnected) {
-                [self presentAlertWithTitle:@"Error" message:@"Server is not available."];
-            }*/
-            
         } else {
             [self presentAlertWithTitle:@"Error" message:@"Code value should be between 0 and 255."];
         }
@@ -75,6 +70,10 @@ static NSCharacterSet* nonDigits;
 - (void) connectedToServer {
     SubjectCollectionViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubjectCollectionViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void) serverNotFound {
+    [self presentAlertWithTitle:@"Error" message:@"Server is no available."];
 }
 
 - (void) presentAlertWithTitle:(NSString *)title message:(NSString *)message {
@@ -87,7 +86,6 @@ static NSCharacterSet* nonDigits;
                                                      handler:^(UIAlertAction * action) {
                                                          [alert dismissViewControllerAnimated:YES completion:nil];
                                                      }];
-    
     [alert addAction:okButton];
     [self presentViewController:alert animated:YES completion:nil];
 }
